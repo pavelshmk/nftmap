@@ -1,0 +1,13 @@
+schema: schema.graphql
+documents: "src/utils/*.graphql"
+generates:
+  ./src/utils/graphql.ts:
+    config:
+      skipTypename: true
+      omitOperationSuffix: true
+      addUnderscoreToArgsType: true
+      dedupeOperationSuffix: true
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request

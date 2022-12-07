@@ -1,0 +1,39 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+.btn-box {
+  @include size(3rem);
+  transition: .3s ease;
+  opacity: .72;
+
+  @each $key, $value in $box-button-icons {
+    &.btn-#{$key} {
+      background: url('../static/icons/buttons-box/#{$value}.svg') center/contain;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: .72;
+  }
+
+  &.disabled {
+    opacity: .16;
+
+    &:hover {
+      opacity: .44;
+    }
+
+    &:active {
+      opacity: .64;
+    }
+  }
+}
+
+.btn.btn-box {
+  mask-image: initial;
+}

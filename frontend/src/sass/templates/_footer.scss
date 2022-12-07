@@ -1,0 +1,25 @@
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+footer {
+  @include flex();
+  @include size(calc(100% - .5rem), auto);
+  padding: 2.5rem 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: .3s ease, opacity .15s ease;
+  pointer-events: none;
+
+  .social {
+    pointer-events: all;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    padding: 1rem;
+  }
+}

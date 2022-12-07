@@ -1,0 +1,12 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+$card-padding: 1.25rem 2rem;
+$card-border-radius: 1.25rem;
+
+
+$card-purchased-items-background: rgba($color-purple-700, .8);
+$card-purchased-items-background-disabled: rgba($color-purple-700, 0);
+$card-purchased-items-background-hover: rgba(#48209E, .8);
+$card-purchased-items-shadow: inset 0px 0px 4px #5828BE;

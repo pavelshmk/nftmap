@@ -1,0 +1,28 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+.pocket {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &-icon {
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+  }
+
+  &-amount {
+    @include font-poppins-20-14-600;
+    margin-left: 0.625rem;
+  }
+
+  &-symbol {
+    @include font-barlow-11-auto-600-4;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $color-white-60;
+    margin-left: .5rem;
+  }
+}

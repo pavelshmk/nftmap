@@ -1,0 +1,232 @@
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+header {
+  @include flex();
+  position: absolute;
+  top: 0; left: 0;
+  width: calc(100% - .5rem);
+  box-sizing: border-box;
+  padding: 2.5rem 3rem;
+  z-index: 6;
+  transition: .3s ease, opacity .15s ease;
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    z-index: 10;
+    padding: 1rem;
+  }
+
+  img {
+    @include size(8.875rem, auto);
+  }
+
+  &.background-blur {
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      .btn-box {
+        display: none !important;
+      }
+    }
+  }
+}
+
+
+.tab-content-wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  .tabs {
+    @include flex(flex-start, center);
+
+    .tab {
+      @include size(9.625rem, auto);
+      @include font-poppins-16-16-500;
+      cursor: pointer;
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
+      opacity: .6;
+
+      &:not(:first-child) {
+        margin-left: .25rem;
+      }
+
+      &[data-state="active"] {
+        opacity: 1;
+      }
+    }
+  }
+
+  .active {
+    position: absolute;
+    @include size(50%, 100%);
+    left: 0; top: 0;
+    border-radius: 2rem;
+    background: $switch-active-background;
+    box-shadow: $switch-active-shadow;
+    transition: .3s cubic-bezier(.58,-0.72,.37,1.35);
+    z-index: -1;
+  }
+}
+
+
+// Мобильный компонент
+.nav-btn {
+  @include flex;
+  margin-left: auto;
+  @include size(2rem);
+  position: relative;
+
+  .bg {
+    background: rgba(255,255,255,.8);
+    opacity: 0;
+    @include size(100%);
+    border-radius: .25rem
+  }
+
+  [class^="line"] {
+    @include size(1.5rem, .25rem);
+    min-width: 12px;
+    min-height: 2px;
+    background: white;
+    border-radius: .25rem;
+  }
+
+  .bg, .line-1, .line-2, .line-3 {
+    transition: .5s cubic-bezier(.68,-0.18,.38,1.23);
+    position: absolute;
+  }
+
+  .line-1 {
+    top: .625rem;
+  }
+
+  .line-2 {
+    top: calc(.625rem + .5rem);
+  }
+
+  .line-3 {
+    top: calc(.625rem + .5rem * 2);
+  }
+
+  &.active {
+    .bg {
+      opacity: 1;
+    }
+
+    .line-1 {
+      transform: rotateZ(45deg) translate(.15rem, .15rem);
+      background: $color-purple-800;
+    }
+
+    .line-2 {
+      transform: rotateZ(-45deg) translate(.2rem, -.2rem);
+      background: $color-purple-800;
+    }
+
+    .line-3 {
+      opacity: 0;
+      transform: rotateZ(-45deg) translate(-1.3rem, .2rem);
+      background: $color-purple-800;
+    }
+  }
+}
+
+.nav-block {
+  position: absolute;
+  top: 0; left: 0;
+  @include size(100vw, 100vh);
+  background: linear-gradient(180deg, rgba(12, 5, 26, 0.9) 0%, rgba(12, 5, 26, 0.9) 71.19%, rgba(12, 5, 26, 0.35) 100%);
+  z-index: 9;
+  transition: .5s ease;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  padding-bottom: 2.875rem;
+  @include flex(center, center, column);
+  opacity: 0;
+  display: none;
+
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  nav {
+    margin-top: auto;
+    margin-bottom: 5rem;
+
+    p {
+      text-align: center;
+      @include font-poppins-28-24-500;
+      padding: 2.75rem 3rem;
+      color: $color-white-100;
+      transition: .3s ease;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        transition: .3s ease;
+      }
+
+      &.active {
+        color: $color-purple-400;
+        @include flex;
+
+        &::before {
+          border: .5rem solid transparent;
+          border-left: .75rem solid $color-purple-400;
+        }
+      }
+    }
+  }
+
+  .social {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+    .text {
+      flex-basis: 100%;
+      text-align: center;
+      opacity: 1;
+      @include font-poppins-16-16-500;
+    }
+
+    p:first-child {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      @include size(3rem);
+
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+header {
+  .logo-mobile {
+    @include size(3rem);
+    margin-left: auto;
+    margin-right: -3rem;
+  }
+
+  [data-zoom-in-show], [data-close-popup] {
+    position: absolute;
+    @include size(2rem);
+    top: 1.5rem;
+    left: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+
+
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

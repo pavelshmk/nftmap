@@ -1,0 +1,178 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+@import 'forms-variables';
+
+.custom-switch {
+  padding: $switch-padding;
+  border-radius: $switch-border-radius;
+  background: $switch-default-background;
+  box-shadow: $switch-default-shadow;
+  position: relative;
+  width: fit-content;
+  white-space: nowrap;
+
+  .active-switch {
+    position: absolute;
+    border-radius: $switch-border-radius;
+    background: $switch-active-background;
+    box-shadow: $switch-active-shadow;
+    @include size(50%, 100%);
+    top: 0; left: 0;
+    transition: .3s cubic-bezier(.58,-0.72,.37,1.35);
+    z-index: -1;
+  }
+
+  input {
+    @include size(100%);
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+  }
+}
+
+.custom-switch {
+  .switch-content {
+    @include flex(space-between, center);
+
+    .left-content, .right-content {
+      @include flex(сenter, center);
+      transition: .3s opacity .15s ease, .3s color .15s ease;
+      white-space: nowrap;
+    }
+
+    p {
+      @include font-barlow-16-32-500-11;
+      color: $color-white-100;
+
+      &:not(:first-child) {
+        margin-left: $switch-content-margin;
+      }
+    }
+
+    svg {
+      @include size(3rem);
+      path {
+        transition: .3s all .15s ease;
+      }
+    }
+  }
+
+  &.switch-icons {
+    border-radius: 2rem;
+
+    .active-switch {
+      border-radius: 2rem;
+    }
+  }
+}
+
+.custom-switch {
+  input {
+    &:not(:checked) ~ .active-switch {
+      left: 0;
+    }
+
+    &:not(:checked) ~ .active-switch
+    ~ .switch-content
+    > .right-content {
+      opacity: .5;
+    }
+
+    &:checked ~ .active-switch {
+      left: 50%;
+    }
+
+    &:checked ~ .active-switch
+    ~ .switch-content
+    > .left-content {
+      opacity: .5;
+    }
+
+    &:hover {
+      &:not(:checked) ~ .active-switch
+      ~ .switch-content
+      > .right-content {
+        transition: opacity .3s ease, color .3s ease;
+        opacity: 1;
+        color: $color-purple-300;
+
+        svg path {
+          transition: .3s ease;
+          fill: $color-purple-300;
+        }
+      }
+
+      &:checked ~ .active-switch
+      ~ .switch-content
+      > .left-content {
+        transition: opacity .3s ease, color .3s ease;
+        opacity: 1;
+        color: $color-purple-300;
+
+        svg path {
+          transition: .3s ease;
+          fill: $color-purple-300;
+        }
+      }
+    }
+  }
+}
+
+
+.custom-input {
+  input {
+    border: $input-border;
+    border-radius: $input-border-radius;
+    @include font-poppins-16-16-500;
+    outline: none;
+    background: transparent;
+    padding: $input-padding;
+    color: $color-purple-50;
+    transition: .3s ease;
+
+    &:not(:placeholder-shown) {
+      border-color: $input-color-border-active;
+
+      ~ button {
+        opacity: .8;
+      }
+    }
+  }
+
+  &:hover {
+    > input, > .custom-search > input {
+      border-color: $input-color-border-active;
+    }
+  }
+
+
+  .custom-search {
+    position: relative;
+    @include flex(space-between);
+
+    &::before {
+      content: url('../static/icons/forms/search.svg');
+      display: block;
+      position: absolute;
+      @include size(1.5rem);
+      opacity: .8;
+      left: 1rem; top: calc(50% - .75rem);
+    }
+
+    button[type="submit"] {
+      position: absolute;
+      right: 1rem; top: calc(50% - 2.5rem / 2);
+      @include size(2.5rem);
+    }
+
+    input {
+      padding-left: calc(1rem + 1.5rem + .75rem);
+      padding-right: calc(1rem + 2.5rem + .5rem);
+    }
+  }
+}

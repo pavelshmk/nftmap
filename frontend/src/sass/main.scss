@@ -1,0 +1,107 @@
+@import 'colors';
+@import 'mixins';
+@import 'grid';
+@import 'fonts';
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.fixed {
+    @include size(100vw, 100vh);
+    overflow: hidden;
+  }
+}
+
+input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --smooth-corners-value: 5;
+}
+
+@import 'unusual-elements';
+@import 'components/buttons/buttons';
+@import 'components/forms/forms';
+@import 'components/tooltips/tooltips';
+@import 'components/alerts/alerts';
+@import 'components/cards/cards';
+@import 'components/params/params';
+@import 'components/popup/popup';
+@import 'components/range-slider/range-slider';
+@import 'components/pocket/pocket';
+@import 'components/metamask/metamask';
+
+@import 'templates/header';
+@import 'templates/main-page';
+@import 'templates/background';
+@import 'templates/footer';
+@import 'templates/planets';
+@import 'templates/switch-distance';
+@import 'templates/planets-toolbar';
+@import 'templates/planets-info';
+@import 'templates/earth-continents';
+@import 'templates/about-us';
+
+@import 'animation';
+
+.solar-system {
+  @include size(100vw, 100vh);
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+  transition: .3s ease;
+  position: relative;
+
+  &.active-tab {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+.soon {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0s ease;
+  @include font-poppins-56-auto-500;
+  font-weight: 600;
+  letter-spacing: .115em;
+  @include size(30rem);
+  @include flex;
+
+  &.switch-checked {
+    opacity: 0;
+    visibility: hidden;
+    transition: .1s ease !important;
+  }
+
+
+  .bg {
+    position: absolute;
+    @include size(100%);
+    background: rgba(#000000, .5);
+    border-radius: 50%;
+    filter: blur(5rem);
+  }
+
+  &.show {
+    transition: .3s ease .3s;
+  }
+}

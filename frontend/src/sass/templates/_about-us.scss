@@ -1,0 +1,190 @@
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+.about-us {
+  position: absolute;
+  top: 0; left: 0;
+  @include size(100vw, 100vh);
+  max-height: 100vh;
+  background-color: rgba(0, 0, 0, .6);
+  backdrop-filter: blur(2rem);
+  transition: .3s ease;
+  overflow-y: auto;
+  z-index: 5;
+
+  display: none;
+  opacity: 0;
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    z-index: 9;
+  }
+
+  &::-webkit-scrollbar-track {background: $color-purple-100;}
+  &::-webkit-scrollbar {width: .5rem;}
+  &::-webkit-scrollbar-thumb {border-radius: 0; background: $color-purple-600;}
+  &:hover::-webkit-scrollbar-thumb {background: $color-purple-600;}
+
+  &.active-tab {
+    display: block;
+    opacity: 1;
+  }
+
+  .provenance {
+    max-width: 65.875rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-wrapper {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        padding: 7rem 1rem;
+      }
+    }
+
+    &-title {
+      @include font-poppins-28-24-500;
+      color: $color-purple-50;
+    }
+
+    &-text {
+      @include font-poppins-16-24-400;
+      margin-top: .7rem;
+      margin-bottom: .7rem;
+      color: #938E9E;
+    }
+
+    &-verify {
+      background-color: $color-purple-800;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 2rem;
+      padding: 2rem;
+
+      &-title,
+      &-text {
+        @include font-poppins-16-16-600;
+        color: $color-purple-100;
+        line-height: 1.5rem;
+      }
+
+      &-text {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &-contracts {
+        &-item {
+          display: flex;
+          align-items: center;
+          margin-top: 0.3125rem;
+          margin-bottom: 0.3125rem;
+
+          @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          span {
+            width: 18.75rem;
+            margin-right: 2rem;
+          }
+
+          .proof-hash {
+            @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+              overflow-x: scroll;
+              max-width: 100%;
+              padding-bottom: .25rem;
+            }
+          }
+
+          a {
+            position: relative;
+            text-decoration: underline;
+            padding-left: 2rem;
+            color: $color-purple-400;
+            font-weight: 600;
+
+            @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+              overflow-x: scroll;
+              max-width: calc(100% - 2rem);
+              padding-bottom: .25rem;
+            }
+
+            &::before {
+              content: '';
+              width: 1.25rem;
+              height: 1.25rem;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              background-image: url(../static/icons/forms/checked.svg);
+              background-size: cover;
+
+              @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+                top: calc(50% - .25rem / 2)
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-subtitle {
+      @include font-poppins-20-24-500;
+      color: $color-purple-50;
+    }
+
+    &-list {
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+
+      .table-wrapper {
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          overflow-x: scroll;
+          max-width: 100%;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        @include font-poppins-24-24-600;
+        font-size: 0.8125rem;
+        font-weight: normal;
+        color: #938E9E;
+        width: 100%;
+
+        a {
+          color: $color-purple-400;
+          text-decoration: underline;
+          font-weight: 600;
+        }
+
+        td {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid #251841;
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            padding-right: 1rem;
+          }
+
+          &:nth-child(4) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    &-descr {
+      @include font-barlow-14-20-500-11;
+      text-transform: uppercase;
+      color: $color-purple-50;
+      margin-bottom: .5rem;
+    }
+  }
+}

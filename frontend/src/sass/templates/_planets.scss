@@ -1,0 +1,444 @@
+:root {
+  --orbit-width: 8.125rem;
+  --orbit-offset: 0.125rem;
+  --orbit-mobile-width: calc(100% / 3 + 100% / 6);
+  --orbit-mobile-offset: .25rem;
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+  --planet-mobile-size: 5rem;
+}
+
+$planets-list: (
+  earth-default: 'earth',
+  earth-active: 'earth-active',
+  jupiter-default: 'jupiter',
+  jupiter-active: 'jupiter-active',
+  mars-default: 'mars',
+  mars-active: 'mars-active',
+  mercury-default: 'mercury',
+  mercury-active: 'mercury-active',
+  moon-default: 'moon',
+  moon-active: 'moon-active',
+  neptune-default: 'neptune',
+  neptune-active: 'neptune-active',
+  saturn-default: 'saturn',
+  saturn-active: 'saturn-active',
+  venus-default: 'venus',
+  venus-active: 'venus-active',
+  uranus-default: 'uranus',
+  uranus-active: 'uranus-active',
+);
+
+@each $key, $value in $planets-list {
+  .planet-#{$key} {
+    background-image: url('../static/images/planets/#{$value}.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.planets-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  @include size(100vw, 100vh);
+  overflow: hidden;
+  @include flex();
+  transition: .15s ease;
+
+  &.switch-checked {
+    transform: scale(2);
+    opacity: 0;
+    transition: .3s ease !important;
+    visibility: hidden;
+  }
+
+  .planets {
+    position: relative;
+    @include size(65.875rem, 50.25rem);
+    transition: .5s ease, .15s transform .1s cubic-bezier(1,.07,.51,.94);
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      @include size(100vw, 100vh);
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      transform: translateX(-100%);
+      transition: .5s ease, transform .15s ease;
+    }
+  }
+
+  .orbit-line {
+    position: absolute;
+    @include size(var(--orbit-width), 100%);
+    transition: .1s ease;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      @include size(var(--orbit-mobile-width), 100%);
+    }
+
+    .orbit {
+      position: absolute;
+      @include size(100%);
+      transition: .3s ease .1s;
+    }
+
+    &.mercury-orbit {
+      left: 0;
+    }
+    &.venus-orbit {
+      left: calc(var(--orbit-width) + var(--orbit-offset));
+    }
+    &.moon-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 1.5 + var(--orbit-width) / 2 - var(--orbit-width) / 20 / 2);
+      width: calc( var(--orbit-width) / 20 );
+    }
+    &.earth-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 2);
+    }
+    &.mars-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 3);
+    }
+    &.jupiter-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 4);
+    }
+    &.saturn-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 5);
+    }
+    &.uranus-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 6);
+    }
+    &.neptune-orbit {
+      left: calc( (var(--orbit-width) + var(--orbit-offset)) * 7);
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      &.mercury-orbit {
+        left: calc(var(--orbit-mobile-width) / 2);
+      }
+      &.venus-orbit {
+        left: calc(var(--orbit-mobile-width) * 1.5);
+      }
+      // &.moon-orbit {
+      //   left: calc( (var(--orbit-width) + var(--orbit-offset)) * 1.5 + var(--orbit-width) / 2 - var(--orbit-width) / 20 / 2);
+      //   width: calc( var(--orbit-width) / 20 );
+      // }
+      &.earth-orbit {
+        left: calc(var(--orbit-mobile-width) * 2.5);
+      }
+      &.mars-orbit {
+        left: calc(var(--orbit-mobile-width) * 3.5);
+      }
+      &.jupiter-orbit {
+        left: calc(var(--orbit-mobile-width) * 4.5);
+      }
+      &.saturn-orbit {
+        left: calc(var(--orbit-mobile-width) * 5.5);
+      }
+      &.uranus-orbit {
+        left: calc(var(--orbit-mobile-width) * 6.5);
+      }
+      &.neptune-orbit {
+        left: calc(var(--orbit-mobile-width) * 7.5);
+      }
+    }
+  }
+
+  .planet {
+    cursor: pointer;
+    transition: .5s ease;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      @include size(var(--planet-mobile-size));
+      left: calc(50% - var(--planet-mobile-size) / 2);
+      top: calc(50% - var(--planet-mobile-size) / 2 + .5rem) !important;
+    }
+
+    [class*="-active"], .shadow, .shadow-2 {
+      opacity: 0;
+      position: absolute;
+      @include size(100%);
+    }
+
+    [class*="-default"] {
+      position: absolute;
+      @include size(100%);
+    }
+
+    [class^="planet"] {
+      transition: .3s ease;
+    }
+
+    .shadow-2 {
+      background: $color-purple-500;
+      filter: blur(128px);
+      transition: .3s ease;
+      z-index: -1;
+    }
+
+    .shadow-mobile {
+      position: absolute;
+      left: 0; top: 0;
+      @include size(100%);
+      background: #FF5A5A;
+      filter: blur(150px);
+      transition: .3s ease;
+      z-index: -1;
+      opacity: 0; visibility: hidden;
+
+      @supports (mix-blend-mode: color-dodge) {
+        mix-blend-mode: color-dodge;
+      }
+    }
+
+    .shadow {
+      background: rgba($color-black-900, 0.5);
+      filter: blur(2.5rem);
+      border-radius: 50%;
+      top: 1rem;
+      transition: .3s ease;
+      z-index: -1;
+    }
+
+    &:hover {
+      transform: scale(1.06);
+
+      [class*="-active"] {
+        opacity: 1;
+      }
+
+      .shadow, .shadow-2 {
+        opacity: 1;
+      }
+    }
+
+    &.moon {
+      cursor: default;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
+    &.mercury {
+      top: 49.5%;
+    }
+    &.venus {
+      top: 53.5%;
+    }
+    &.moon {
+      top: 44.25%;
+    }
+    &.earth { // данный параметр здесь не работает. Нужно менять ниже в тултипе
+      top: 43.75%;
+    }
+    &.mars {
+      top: 40%;
+    }
+    &.jupiter {
+      top: 52%;
+    }
+    &.saturn {
+      top: 37%;
+    }
+    &.uranus {
+      top: 52%;
+    }
+    &.neptune {
+      top: 35.25%;
+    }
+  }
+
+  .earth {
+    position: absolute;
+    @include size(7.75rem);
+    left: calc(50% - 7.75rem / 2);
+  }
+
+  .jupiter  {
+    position: absolute;
+    @include size(5rem);
+    left: calc(50% - 5rem / 2);
+  }
+
+  .mars {
+    position: absolute;
+    @include size(3.6rem);
+    left: calc(50% - 3.6rem / 2);
+  }
+
+  .mercury  {
+    position: absolute;
+    @include size(2.45rem);
+    left: calc(50% - 2.45rem / 2);
+  }
+
+  .moon {
+    position: absolute;
+    @include size(1rem);
+    left: calc(50% - 1rem / 2);
+  }
+
+  .neptune  {
+    position: absolute;
+    @include size(5.35rem);
+    left: calc(50% - 5.35rem / 2);
+  }
+
+  .saturn {
+    position: absolute;
+    @include size(7.55rem);
+    left: calc(50% - 7.55rem / 2);
+  }
+
+  .venus  {
+    position: absolute;
+    @include size(2rem);
+    left: calc(50% - 2rem / 2);
+  }
+
+  .uranus  {
+    position: absolute;
+    @include size(9.15rem);
+    left: calc(50% - 9.15rem / 2);
+  }
+
+  .saturn, .uranus {
+    .shadow-mobile {
+      @include size(60%);
+    }
+  }
+}
+
+
+
+.planets-canvas {
+  .earth-tooltip {
+    top: 45.35%;
+    transition: .5s ease;
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      @include size(var(--planet-mobile-size));
+      left: calc(50% - var(--planet-mobile-size) / 2);
+      top: calc(50% - var(--planet-mobile-size) / 2) !important;
+    }
+
+    .planet {
+      @include size(7.75rem);
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        @include size(var(--planet-mobile-size));
+      }
+
+      &:hover {
+        & ~ .tooltip {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .tooltip {
+      left: -3.5rem;
+      bottom: calc(100% + 1.25rem);
+    }
+  }
+}
+
+
+// Стили на мобилке
+.card-planet {
+  display: none;
+}
+
+.zoom-out .active-planet-mobile {
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    .planet, .earth-tooltip {
+      width: 14rem !important;
+      height: 14rem !important;
+      left: calc(50% - 14rem / 2 + 2rem) !important;
+      top: calc(50% - 14rem / 2 + 1.25rem) !important;
+
+      [class*="-active"] {
+        opacity: 1;
+      }
+
+      .shadow, .shadow-2 {
+        opacity: 1;
+      }
+    }
+
+
+    .card-planet {
+      display: block;
+      position: absolute;
+      // @include size(calc(100vw - 3.5rem * 2), 22rem);
+      // left: calc(50% - (100vw - 3.5rem * 2) / 2);
+      // top: calc(50% - 20rem / 2 + 1.25rem);
+      @include size(17.25rem, 22.5rem);
+      left: calc(50% - 17.25rem/ 2);
+      top: calc(50% - 22.5rem / 2 + 2rem);
+
+      @include flex(space-between, flex-start);
+      border-radius: $card-border-radius;
+      padding: $card-padding;
+      box-sizing: border-box;
+      transition: .3s ease;
+
+      background: rgba(58, 25, 128, 0.32);
+      box-shadow: inset 0px 0px 5px rgba(101, 44, 222, 0.67);
+
+      .card-header {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 1;
+        @include flex(flex-start, flex-start, column);
+      }
+
+      .btn-icon {
+        position: absolute;
+        width: calc( 100% - 3rem );
+        left: 1.5rem;
+        bottom: 1.5rem;
+        box-sizing: border-box;
+
+      }
+
+      .row {
+        @include flex;
+
+        .actual-planet-number, .planet-number {
+          font-family: 'Poppins', sans-serif;
+          font-style: normal;
+          font-size: .875rem;
+          line-height: 1.5rem;
+          font-weight: 400;
+        }
+
+        .actual-planet-number {
+          color: $color-purple-50;
+        }
+
+        .planet-number {
+          color: $color-white-100;
+          opacity: .6;
+        }
+
+        img {
+          width: 100%;
+          opacity: .6;
+          margin: 0 .5rem;
+        }
+      }
+
+      .planet-name {
+        @include font-poppins-40-48-500;
+        text-shadow: 0px 2px 5px #381E75;
+        color: $color-white-100;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import 'alerts-variables';
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+.alert {
+  @include flex(flex-end, flex-end, column);
+  @include size($alert-width, $alert-height);
+  border-bottom-left-radius: $alert-border-radius;
+  border-bottom-right-radius: $alert-border-radius;
+  color: $color-purple-50;
+  box-sizing: border-box;
+  padding: $alert-padding;
+
+  .alert-subtext {
+    @include font-barlow-14-20-600-11;
+  }
+
+  .alert-status {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+    letter-spacing: 2%;
+  }
+}
+
+@each $alert-type, $alert-type-properties in $alert-types {
+  @each $alert-type-property-keys, $alert-type-property-values  in $alert-type-properties {
+    .alert-#{$alert-type} {
+      @if ($alert-type-property-keys == 'background') {
+        background: $alert-type-property-values;
+      } @else {
+        box-shadow: $alert-type-property-values;
+      }
+    }
+  }
+}

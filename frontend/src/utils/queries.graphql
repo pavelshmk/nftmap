@@ -1,0 +1,39 @@
+query getEntities {
+    planets {
+        enum
+        name
+        number
+        price
+        sunDistance
+        tokenId
+        weight
+        emission
+    }
+    countries {
+        area
+        code
+        cryptoIndex
+        gdp
+        image
+        name
+        number
+        population
+        price
+        tokenId
+        emission
+    }
+    maxCountryPrice
+}
+
+query tokenMintArgs($buyer: String!, $tokenId: Int!) {
+    tokenMintArgs(buyer: $buyer, tokenId: $tokenId)
+}
+
+query entitiesInfo($tokenIds: [String]) {
+    entitiesInfo(tokenIds: $tokenIds) {
+        name
+        image
+        tokenId
+        link
+    }
+}

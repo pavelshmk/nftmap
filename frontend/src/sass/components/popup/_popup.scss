@@ -1,0 +1,69 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+@import 'popup-variables';
+@import 'popup-wallet';
+@import 'popup-token';
+
+.popup {
+  position: fixed;
+  @include size(100vw, 100vh);
+  // background-color: rgba(0, 0, 0, .8);
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transform: translateY(100vh);
+  display: none;
+  transition: .3s ease;
+  opacity: 0;
+
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-container {
+    position: absolute;
+    width: calc(100% - 6.25rem);
+    border-top-left-radius: $popup-border-radius;
+    border-top-right-radius: $popup-border-radius;
+    background: rgba(58, 25, 128, 0.88);
+    box-shadow: inset 0px 0px 5px #652CDE;
+    transform: translateX(-50%);
+    padding: $popup-padding;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 50%;
+    padding-bottom: 5rem;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      background: rgba(58, 25, 128, 0.88);
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.popup-background {
+  @include size(100vw, 100vh);
+  position: fixed;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 9;
+  display: none;
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    z-index: 6;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,2112 @@
+{
+    "planets": [
+        {
+            "number": "1",
+            "name": "Mercury",
+            "tokenId": "1",
+            "sunDistance": "57910000",
+            "priceEth": "50",
+            "weight": "328500000000000000000000"
+        },
+        {
+            "number": "2",
+            "name": "Venus",
+            "tokenId": "2",
+            "sunDistance": "108200000",
+            "priceEth": "50",
+            "weight": "4867000000000000000000000"
+        },
+        {
+            "number": "3",
+            "name": "Mars",
+            "tokenId": "3",
+            "sunDistance": "230000000",
+            "priceEth": "50",
+            "weight": "639000000000000000000000"
+        },
+        {
+            "number": "4",
+            "name": "Jupiter",
+            "tokenId": "4",
+            "sunDistance": "778000000",
+            "priceEth": "50",
+            "weight": "1898000000000000000000000000"
+        },
+        {
+            "number": "5",
+            "name": "Saturn",
+            "tokenId": "5",
+            "sunDistance": "1488100000",
+            "priceEth": "50",
+            "weight": "568300000000000000000000000"
+        },
+        {
+            "number": "6",
+            "name": "Uranus",
+            "tokenId": "6",
+            "sunDistance": "2871000000",
+            "priceEth": "50",
+            "weight": "86810000000000000000000000"
+        },
+        {
+            "number": "7",
+            "name": "Neptune",
+            "tokenId": "7",
+            "sunDistance": "4495000000",
+            "priceEth": "50",
+            "weight": "102400000000000000000000000"
+        }
+    ],
+    "countries": [
+        {
+            "number": "1",
+            "name": "United States",
+            "tokenId": "8",
+            "code": "USA",
+            "gdp": "21433226000000",
+            "area": "9834000",
+            "population": "328200000",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "2",
+            "name": "China",
+            "tokenId": "9",
+            "code": "CHN",
+            "gdp": "14342903000000",
+            "area": "9597000",
+            "population": "1400050000",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "3",
+            "name": "Japan",
+            "tokenId": "10",
+            "code": "JPN",
+            "gdp": "5081770000000",
+            "area": "377975",
+            "population": "125480000",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "4",
+            "name": "Germany",
+            "tokenId": "11",
+            "code": "DEU",
+            "gdp": "3861124000000",
+            "area": "357022",
+            "population": "83166711",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "5",
+            "name": "India",
+            "tokenId": "12",
+            "code": "IND",
+            "gdp": "2868929000000",
+            "area": "3287263",
+            "population": "1352642280",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "6",
+            "name": "United Kingdom",
+            "tokenId": "13",
+            "code": "GBR",
+            "gdp": "2829108000000",
+            "area": "242495",
+            "population": "67886004",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "7",
+            "name": "France",
+            "tokenId": "14",
+            "code": "FRA",
+            "gdp": "2715518000000",
+            "area": "640679",
+            "population": "67399000",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "8",
+            "name": "Italy",
+            "tokenId": "15",
+            "code": "ITA",
+            "gdp": "2003576000000",
+            "area": "301340",
+            "population": "60317116",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "9",
+            "name": "Brazil",
+            "tokenId": "16",
+            "code": "BRA",
+            "gdp": "1839758000000",
+            "area": "8515767",
+            "population": "210147125",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "10",
+            "name": "Canada",
+            "tokenId": "17",
+            "code": "CAN",
+            "gdp": "1736426000000",
+            "area": "9984670",
+            "population": "38048738",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "11",
+            "name": "Russian Federation",
+            "tokenId": "18",
+            "code": "RUS",
+            "gdp": "1699877000000",
+            "area": "17130000",
+            "population": "144400000",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "12",
+            "name": "Korea, Rep.",
+            "tokenId": "19",
+            "code": "KOR",
+            "gdp": "1646739000000",
+            "area": "100363",
+            "population": "51709098",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "13",
+            "name": "Australia",
+            "tokenId": "20",
+            "code": "AUS",
+            "gdp": "1396567000000",
+            "area": "25780900",
+            "population": "7692024",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "14",
+            "name": "Spain",
+            "tokenId": "21",
+            "code": "ESP",
+            "gdp": "1393491000000",
+            "area": "505990",
+            "population": "47450795",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "15",
+            "name": "Mexico",
+            "tokenId": "22",
+            "code": "MEX",
+            "gdp": "1268871000000",
+            "area": "1972550",
+            "population": "126014024",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "16",
+            "name": "Indonesia",
+            "tokenId": "23",
+            "code": "IDN",
+            "gdp": "1119191000000",
+            "area": "1904569",
+            "population": "270203917",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "17",
+            "name": "Netherlands",
+            "tokenId": "24",
+            "code": "NLD",
+            "gdp": "907051000000",
+            "area": "41865",
+            "population": "17469635",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "18",
+            "name": "Saudi Arabia",
+            "tokenId": "25",
+            "code": "SAU",
+            "gdp": "792967000000",
+            "area": "2149690",
+            "population": "34218169",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "19",
+            "name": "Turkey",
+            "tokenId": "26",
+            "code": "TUR",
+            "gdp": "761425000000",
+            "area": "783356",
+            "population": "83614362",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "20",
+            "name": "Switzerland",
+            "tokenId": "27",
+            "code": "CHE",
+            "gdp": "703082000000",
+            "area": "41285",
+            "population": "8570146",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "21",
+            "name": "Poland",
+            "tokenId": "28",
+            "code": "POL",
+            "gdp": "595858000000",
+            "area": "312696",
+            "population": "38268000",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "22",
+            "name": "Thailand",
+            "tokenId": "29",
+            "code": "THA",
+            "gdp": "543549000000",
+            "area": "513120",
+            "population": "66558935",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "23",
+            "name": "Belgium",
+            "tokenId": "30",
+            "code": "BEL",
+            "gdp": "533097000000",
+            "area": "30689",
+            "population": "11492641",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "24",
+            "name": "Sweden",
+            "tokenId": "31",
+            "code": "SWE",
+            "gdp": "530884000000",
+            "area": "450295",
+            "population": "10380491",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "25",
+            "name": "Iran, Islamic Rep.",
+            "tokenId": "32",
+            "code": "IRN",
+            "gdp": "453996000000",
+            "area": "1648195",
+            "population": "83183741",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "26",
+            "name": "Nigeria",
+            "tokenId": "33",
+            "code": "NGA",
+            "gdp": "448120000000",
+            "area": "923769",
+            "population": "206630269",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "27",
+            "name": "Argentina",
+            "tokenId": "34",
+            "code": "ARG",
+            "gdp": "445445000000",
+            "area": "2780400",
+            "population": "44938712",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "28",
+            "name": "Austria",
+            "tokenId": "35",
+            "code": "AUT",
+            "gdp": "445075000000",
+            "area": "83879",
+            "population": "8935112",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "29",
+            "name": "United ArabEmirates",
+            "tokenId": "36",
+            "code": "ARE",
+            "gdp": "421142000000",
+            "area": "83600",
+            "population": "9890400",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "30",
+            "name": "Norway",
+            "tokenId": "37",
+            "code": "NOR",
+            "gdp": "403336000000",
+            "area": "385207",
+            "population": "5391369",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "31",
+            "name": "Israel",
+            "tokenId": "38",
+            "code": "ISR",
+            "gdp": "394652000000",
+            "area": "20770",
+            "population": "9291000",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "32",
+            "name": "Ireland",
+            "tokenId": "39",
+            "code": "IRL",
+            "gdp": "388699000000",
+            "area": "70273",
+            "population": "4937786",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "33",
+            "name": "Philippines",
+            "tokenId": "40",
+            "code": "PHL",
+            "gdp": "376796000000",
+            "area": "300000",
+            "population": "109581078",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "34",
+            "name": "Singapore",
+            "tokenId": "41",
+            "code": "SGP",
+            "gdp": "372063000000",
+            "area": "728",
+            "population": "5850342",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "35",
+            "name": "Hong Kong SAR, China",
+            "tokenId": "42",
+            "code": "HKG",
+            "gdp": "365712000000",
+            "area": "1104",
+            "population": "7496981",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "36",
+            "name": "Malaysia",
+            "tokenId": "43",
+            "code": "MYS",
+            "gdp": "364681000000",
+            "area": "329847",
+            "population": "32730000",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "37",
+            "name": "South Africa",
+            "tokenId": "44",
+            "code": "ZAF",
+            "gdp": "351432000000",
+            "area": "1221037",
+            "population": "58775022",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "38",
+            "name": "Denmark",
+            "tokenId": "45",
+            "code": "DNK",
+            "gdp": "350104000000",
+            "area": "42933",
+            "population": "5837213",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "39",
+            "name": "Colombia",
+            "tokenId": "46",
+            "code": "COL",
+            "gdp": "323616000000",
+            "area": "1141748",
+            "population": "50372424",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "40",
+            "name": "Egypt, Arab Rep.",
+            "tokenId": "47",
+            "code": "EGY",
+            "gdp": "303092000000",
+            "area": "1010408",
+            "population": "101576517",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "41",
+            "name": "Bangladesh",
+            "tokenId": "48",
+            "code": "BGD",
+            "gdp": "302571000000",
+            "area": "147570",
+            "population": "161376708",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "42",
+            "name": "Chile",
+            "tokenId": "49",
+            "code": "CHL",
+            "gdp": "282318000000",
+            "area": "756096",
+            "population": "19116201",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "43",
+            "name": "Pakistan",
+            "tokenId": "50",
+            "code": "PAK",
+            "gdp": "278222000000",
+            "area": "881913",
+            "population": "224242164",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "44",
+            "name": "Finland",
+            "tokenId": "51",
+            "code": "FIN",
+            "gdp": "269296000000",
+            "area": "338455",
+            "population": "5536146",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "45",
+            "name": "Vietnam",
+            "tokenId": "52",
+            "code": "VNM",
+            "gdp": "261921000000",
+            "area": "331699",
+            "population": "98168833",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "46",
+            "name": "Czech Republic",
+            "tokenId": "53",
+            "code": "CZE",
+            "gdp": "250681000000",
+            "area": "78866",
+            "population": "10724549",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "47",
+            "name": "Romania",
+            "tokenId": "54",
+            "code": "ROU",
+            "gdp": "250077000000",
+            "area": "238397",
+            "population": "19136495",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "48",
+            "name": "Portugal",
+            "tokenId": "55",
+            "code": "PRT",
+            "gdp": "238785000000",
+            "area": "92212",
+            "population": "10173293",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "49",
+            "name": "Iraq",
+            "tokenId": "56",
+            "code": "IRQ",
+            "gdp": "234094000000",
+            "area": "437072",
+            "population": "41179350",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "50",
+            "name": "Peru",
+            "tokenId": "57",
+            "code": "PER",
+            "gdp": "226848000000",
+            "area": "1285216",
+            "population": "33359418",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "51",
+            "name": "Greece",
+            "tokenId": "58",
+            "code": "GRC",
+            "gdp": "209853000000",
+            "area": "131957",
+            "population": "10381384",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "52",
+            "name": "New Zealand",
+            "tokenId": "59",
+            "code": "NZL",
+            "gdp": "206929000000",
+            "area": "268021",
+            "population": "4852962",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "53",
+            "name": "Kazakhstan",
+            "tokenId": "60",
+            "code": "KAZ",
+            "gdp": "181666000000",
+            "area": "2724900",
+            "population": "18711560",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "54",
+            "name": "Qatar",
+            "tokenId": "61",
+            "code": "QAT",
+            "gdp": "175838000000",
+            "area": "11581",
+            "population": "2919091",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "55",
+            "name": "Algeria",
+            "tokenId": "62",
+            "code": "DZA",
+            "gdp": "171091000000",
+            "area": "2381741",
+            "population": "44616624",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "56",
+            "name": "Hungary",
+            "tokenId": "63",
+            "code": "HUN",
+            "gdp": "163469000000",
+            "area": "93030",
+            "population": "9641034",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "57",
+            "name": "Ukraine",
+            "tokenId": "64",
+            "code": "UKR",
+            "gdp": "153781000000",
+            "area": "603628",
+            "population": "43525906",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "58",
+            "name": "Kuwait",
+            "tokenId": "65",
+            "code": "KWT",
+            "gdp": "134629000000",
+            "area": "17818",
+            "population": "4319819",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "59",
+            "name": "Morocco",
+            "tokenId": "66",
+            "code": "MAR",
+            "gdp": "119700000000",
+            "area": "710850",
+            "population": "37249722",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "60",
+            "name": "Ecuador",
+            "tokenId": "67",
+            "code": "ECU",
+            "gdp": "107436000000",
+            "area": "710850",
+            "population": "17888475",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "61",
+            "name": "Slovak Republic",
+            "tokenId": "68",
+            "code": "SVK",
+            "gdp": "105080000000",
+            "area": "49035",
+            "population": "5461722",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "62",
+            "name": "Puerto Rico",
+            "tokenId": "69",
+            "code": "PRI",
+            "gdp": "104989000000",
+            "area": "9104",
+            "population": "2801976",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "63",
+            "name": "Cuba",
+            "tokenId": "70",
+            "code": "CUB",
+            "gdp": "100023000000",
+            "area": "109884",
+            "population": "11317505",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "64",
+            "name": "Ethiopia",
+            "tokenId": "71",
+            "code": "ETH",
+            "gdp": "95913000000",
+            "area": "1104300",
+            "population": "117876227",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "65",
+            "name": "Kenya",
+            "tokenId": "72",
+            "code": "KEN",
+            "gdp": "95503000000",
+            "area": "580367",
+            "population": "54692071",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "66",
+            "name": "Dominican Republic",
+            "tokenId": "73",
+            "code": "DOM",
+            "gdp": "88941000000",
+            "area": "48671",
+            "population": "10933492",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "67",
+            "name": "Angola",
+            "tokenId": "74",
+            "code": "AGO",
+            "gdp": "88816000000",
+            "area": "1246700",
+            "population": "33657917",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "68",
+            "name": "Sri Lanka",
+            "tokenId": "75",
+            "code": "LKA",
+            "gdp": "84009000000",
+            "area": "65610",
+            "population": "21483547",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "69",
+            "name": "Guatemala",
+            "tokenId": "76",
+            "code": "GTM",
+            "gdp": "76710000000",
+            "area": "108889",
+            "population": "18174497",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "70",
+            "name": "Oman",
+            "tokenId": "77",
+            "code": "OMN",
+            "gdp": "76332000000",
+            "area": "309500",
+            "population": "5207798",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "71",
+            "name": "Myanmar",
+            "tokenId": "78",
+            "code": "MMR",
+            "gdp": "76086000000",
+            "area": "676578",
+            "population": "54696124",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "72",
+            "name": "Luxembourg",
+            "tokenId": "79",
+            "code": "LUX",
+            "gdp": "71105000000",
+            "area": "2586",
+            "population": "633914",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "73",
+            "name": "Bulgaria",
+            "tokenId": "80",
+            "code": "BGR",
+            "gdp": "68559000000",
+            "area": "110994",
+            "population": "6896663",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "74",
+            "name": "Ghana",
+            "tokenId": "81",
+            "code": "GHA",
+            "gdp": "66984000000",
+            "area": "239567",
+            "population": "31577420",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "75",
+            "name": "Panama",
+            "tokenId": "82",
+            "code": "PAN",
+            "gdp": "66801000000",
+            "area": "75417",
+            "population": "4367896",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "76",
+            "name": "Tanzania",
+            "tokenId": "83",
+            "code": "TZA",
+            "gdp": "63177000000",
+            "area": "947303",
+            "population": "61057874",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "77",
+            "name": "Belarus",
+            "tokenId": "84",
+            "code": "BLR",
+            "gdp": "63080000000",
+            "area": "207595",
+            "population": "9442862",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "78",
+            "name": "Costa Rica",
+            "tokenId": "85",
+            "code": "CRI",
+            "gdp": "61801000000",
+            "area": "51100",
+            "population": "5130473",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "79",
+            "name": "Croatia",
+            "tokenId": "86",
+            "code": "HRV",
+            "gdp": "60753000000",
+            "area": "56594",
+            "population": "4085238",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "80",
+            "name": "C\u00f4te d'Ivoire",
+            "tokenId": "87",
+            "code": "CIV",
+            "gdp": "58539000000",
+            "area": "322463",
+            "population": "26887262",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "81",
+            "name": "Uzbekistan",
+            "tokenId": "88",
+            "code": "UZB",
+            "gdp": "57921000000",
+            "area": "448978",
+            "population": "33848811",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "82",
+            "name": "Uruguay",
+            "tokenId": "89",
+            "code": "URY",
+            "gdp": "56046000000",
+            "area": "176215",
+            "population": "3483191",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "83",
+            "name": "Lithuania",
+            "tokenId": "90",
+            "code": "LTU",
+            "gdp": "54627000000",
+            "area": "65300",
+            "population": "2689862",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "84",
+            "name": "Slovenia",
+            "tokenId": "91",
+            "code": "SVN",
+            "gdp": "54174000000",
+            "area": "20271",
+            "population": "2081829",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "85",
+            "name": "Macao SAR, China",
+            "tokenId": "92",
+            "code": "MAC",
+            "gdp": "53859000000",
+            "area": "115",
+            "population": "656265",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "86",
+            "name": "Libya",
+            "tokenId": "93",
+            "code": "LBY",
+            "gdp": "52091000000",
+            "area": "1759541",
+            "population": "6958532",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "87",
+            "name": "Lebanon",
+            "tokenId": "94",
+            "code": "LBN",
+            "gdp": "51992000000",
+            "area": "10452",
+            "population": "6769146",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "88",
+            "name": "Serbia",
+            "tokenId": "95",
+            "code": "SRB",
+            "gdp": "51475000000",
+            "area": "88361",
+            "population": "8709547",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "89",
+            "name": "Congo, Dem. Rep.",
+            "tokenId": "96",
+            "code": "COD",
+            "gdp": "50401000000",
+            "area": "2345409",
+            "population": "92377993",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "90",
+            "name": "Azerbaijan",
+            "tokenId": "97",
+            "code": "AZE",
+            "gdp": "48048000000",
+            "area": "86600",
+            "population": "10223342",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "91",
+            "name": "Jordan",
+            "tokenId": "98",
+            "code": "JOR",
+            "gdp": "44503000000",
+            "area": "89342",
+            "population": "10269021",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "92",
+            "name": "Bolivia",
+            "tokenId": "99",
+            "code": "BOL",
+            "gdp": "40895000000",
+            "area": "1098581",
+            "population": "11797242",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "93",
+            "name": "Turkmenistan",
+            "tokenId": "100",
+            "code": "TKM",
+            "gdp": "40761000000",
+            "area": "491210",
+            "population": "6100574",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "94",
+            "name": "Cameroon",
+            "tokenId": "101",
+            "code": "CMR",
+            "gdp": "39007000000",
+            "area": "475442",
+            "population": "27058922",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "95",
+            "name": "Tunisia",
+            "tokenId": "102",
+            "code": "TUN",
+            "gdp": "38797000000",
+            "area": "163610",
+            "population": "11935766",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "96",
+            "name": "Bahrain",
+            "tokenId": "103",
+            "code": "BHR",
+            "gdp": "38574000000",
+            "area": "780",
+            "population": "1747462",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "97",
+            "name": "Paraguay",
+            "tokenId": "104",
+            "code": "PRY",
+            "gdp": "38145000000",
+            "area": "406796",
+            "population": "7219638",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "98",
+            "name": "Uganda",
+            "tokenId": "105",
+            "code": "UGA",
+            "gdp": "35165000000",
+            "area": "241038",
+            "population": "47123531",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "99",
+            "name": "Latvia",
+            "tokenId": "106",
+            "code": "LVA",
+            "gdp": "34103000000",
+            "area": "64589",
+            "population": "1866942",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "100",
+            "name": "Estonia",
+            "tokenId": "107",
+            "code": "EST",
+            "gdp": "31471000000",
+            "area": "42390",
+            "population": "1326535",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "101",
+            "name": "Nepal",
+            "tokenId": "108",
+            "code": "NPL",
+            "gdp": "30641000000",
+            "area": "143350",
+            "population": "29136808",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "102",
+            "name": "Sudan",
+            "tokenId": "109",
+            "code": "SDN",
+            "gdp": "30513000000",
+            "area": "1765048",
+            "population": "43849260",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "103",
+            "name": "Cambodia",
+            "tokenId": "110",
+            "code": "KHM",
+            "gdp": "27089000000",
+            "area": "176520",
+            "population": "16718965",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "104",
+            "name": "El Salvador",
+            "tokenId": "111",
+            "code": "SLV",
+            "gdp": "27023000000",
+            "area": "20720",
+            "population": "6486205",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "105",
+            "name": "Honduras",
+            "tokenId": "112",
+            "code": "HND",
+            "gdp": "25095000000",
+            "area": "111890",
+            "population": "9904607",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "106",
+            "name": "Cyprus",
+            "tokenId": "113",
+            "code": "CYP",
+            "gdp": "24949000000",
+            "area": "9240",
+            "population": "1207359",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "107",
+            "name": "Papua New Guinea",
+            "tokenId": "114",
+            "code": "PNG",
+            "gdp": "24829000000",
+            "area": "452860",
+            "population": "8947024",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "108",
+            "name": "Trinidad and Tobago",
+            "tokenId": "115",
+            "code": "TTO",
+            "gdp": "24270000000",
+            "area": "5130",
+            "population": "1399488",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "109",
+            "name": "Iceland",
+            "tokenId": "116",
+            "code": "ISL",
+            "gdp": "24188000000",
+            "area": "100250",
+            "population": "341243",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "110",
+            "name": "Senegal",
+            "tokenId": "117",
+            "code": "SEN",
+            "gdp": "23578000000",
+            "area": "192530",
+            "population": "16743927",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "111",
+            "name": "Zambia",
+            "tokenId": "118",
+            "code": "ZMB",
+            "gdp": "23310000000",
+            "area": "743390",
+            "population": "18383955",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "112",
+            "name": "Yemen, Rep.",
+            "tokenId": "119",
+            "code": "YEM",
+            "gdp": "22581000000",
+            "area": "527970",
+            "population": "29825964",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "113",
+            "name": "Zimbabwe",
+            "tokenId": "120",
+            "code": "ZWE",
+            "gdp": "21441000000",
+            "area": "386850",
+            "population": "14862924",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "114",
+            "name": "Bosnia and Herzegovina",
+            "tokenId": "121",
+            "code": "BIH",
+            "gdp": "20164000000",
+            "area": "51000",
+            "population": "3280819",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "115",
+            "name": "Afghanistan",
+            "tokenId": "122",
+            "code": "AFG",
+            "gdp": "19291000000",
+            "area": "652860",
+            "population": "38928346",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "116",
+            "name": "Botswana",
+            "tokenId": "123",
+            "code": "BWA",
+            "gdp": "18340000000",
+            "area": "566730",
+            "population": "2351627",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "117",
+            "name": "Lao PDR",
+            "tokenId": "124",
+            "code": "LAO",
+            "gdp": "18174000000",
+            "area": "230800",
+            "population": "7275560",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "118",
+            "name": "Georgia",
+            "tokenId": "125",
+            "code": "GEO",
+            "gdp": "17477000000",
+            "area": "69490",
+            "population": "3989167",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "119",
+            "name": "Mali",
+            "tokenId": "126",
+            "code": "MLI",
+            "gdp": "17280000000",
+            "area": "1220190",
+            "population": "20250833",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "120",
+            "name": "Gabon",
+            "tokenId": "127",
+            "code": "GAB",
+            "gdp": "16874000000",
+            "area": "257670",
+            "population": "2225734",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "121",
+            "name": "Jamaica",
+            "tokenId": "128",
+            "code": "JAM",
+            "gdp": "16458000000",
+            "area": "10830",
+            "population": "2961167",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "122",
+            "name": "West Bank and Gaza",
+            "tokenId": "129",
+            "code": "PSE",
+            "gdp": "16277000000",
+            "area": "6220",
+            "population": "5198148",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "123",
+            "name": "Burkina Faso",
+            "tokenId": "130",
+            "code": "BFA",
+            "gdp": "15991000000",
+            "area": "273600",
+            "population": "20903273",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "124",
+            "name": "Mozambique",
+            "tokenId": "131",
+            "code": "MOZ",
+            "gdp": "15291000000",
+            "area": "786380",
+            "population": "31255435",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "125",
+            "name": "Albania",
+            "tokenId": "132",
+            "code": "ALB",
+            "gdp": "15279000000",
+            "area": "27400",
+            "population": "2877797",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "126",
+            "name": "Malta",
+            "tokenId": "133",
+            "code": "MLT",
+            "gdp": "14989000000",
+            "area": "320",
+            "population": "441543",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "127",
+            "name": "Benin",
+            "tokenId": "134",
+            "code": "BEN",
+            "gdp": "14391000000",
+            "area": "112760",
+            "population": "12123200",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "128",
+            "name": "Haiti",
+            "tokenId": "135",
+            "code": "HTI",
+            "gdp": "14332000000",
+            "area": "27560",
+            "population": "11402528",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "129",
+            "name": "Madagascar",
+            "tokenId": "136",
+            "code": "MDG",
+            "gdp": "14115000000",
+            "area": "581795",
+            "population": "27691018",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "130",
+            "name": "Mauritius",
+            "tokenId": "137",
+            "code": "MUS",
+            "gdp": "14048000000",
+            "area": "2030",
+            "population": "1271768",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "131",
+            "name": "Mongolia",
+            "tokenId": "138",
+            "code": "MNG",
+            "gdp": "13997000000",
+            "area": "1553560",
+            "population": "3278290",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "132",
+            "name": "Armenia",
+            "tokenId": "139",
+            "code": "ARM",
+            "gdp": "13673000000",
+            "area": "28470",
+            "population": "2963243",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "133",
+            "name": "Bahamas, The",
+            "tokenId": "140",
+            "code": "BHS",
+            "gdp": "13579000000",
+            "area": "10010",
+            "population": "393244",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "134",
+            "name": "Brunei Darussalam",
+            "tokenId": "141",
+            "code": "BRN",
+            "gdp": "13469000000",
+            "area": "5270",
+            "population": "437479",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "135",
+            "name": "Niger",
+            "tokenId": "142",
+            "code": "NER",
+            "gdp": "12912000000",
+            "area": "1266700",
+            "population": "24206644",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "136",
+            "name": "North Macedonia",
+            "tokenId": "143",
+            "code": "MKD",
+            "gdp": "12547000000",
+            "area": "25220",
+            "population": "2083374",
+            "cryptoIndex": "2"
+        },
+        {
+            "number": "137",
+            "name": "Nicaragua",
+            "tokenId": "144",
+            "code": "NIC",
+            "gdp": "12521000000",
+            "area": "120340",
+            "population": "6624554",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "138",
+            "name": "Namibia",
+            "tokenId": "145",
+            "code": "NAM",
+            "gdp": "12367000000",
+            "area": "823290",
+            "population": "2540905",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "139",
+            "name": "Guinea",
+            "tokenId": "146",
+            "code": "GIN",
+            "gdp": "12297000000",
+            "area": "245720",
+            "population": "13132795",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "140",
+            "name": "Congo, Rep.",
+            "tokenId": "147",
+            "code": "COG",
+            "gdp": "12267000000",
+            "area": "341500",
+            "population": "5518087",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "141",
+            "name": "Moldova",
+            "tokenId": "148",
+            "code": "MDA",
+            "gdp": "11969000000",
+            "area": "32850",
+            "population": "4033963",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "142",
+            "name": "Chad",
+            "tokenId": "149",
+            "code": "TCD",
+            "gdp": "11315000000",
+            "area": "1259200",
+            "population": "16425864",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "143",
+            "name": "Equatorial Guinea",
+            "tokenId": "150",
+            "code": "GNQ",
+            "gdp": "11027000000",
+            "area": "28050",
+            "population": "1402985",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "144",
+            "name": "Rwanda",
+            "tokenId": "151",
+            "code": "RWA",
+            "gdp": "10354000000",
+            "area": "24670",
+            "population": "12952218",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "145",
+            "name": "Kyrgyz Republic",
+            "tokenId": "152",
+            "code": "KGZ",
+            "gdp": "8455000000",
+            "area": "199951",
+            "population": "6586600",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "146",
+            "name": "Tajikistan",
+            "tokenId": "153",
+            "code": "TJK",
+            "gdp": "8117000000",
+            "area": "139960",
+            "population": "9537645",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "147",
+            "name": "Kosovo",
+            "tokenId": "154",
+            "code": "XKX",
+            "gdp": "7926000000",
+            "area": "10908",
+            "population": "1733842",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "148",
+            "name": "Malawi",
+            "tokenId": "155",
+            "code": "MWI",
+            "gdp": "7667000000",
+            "area": "94280",
+            "population": "19129952",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "149",
+            "name": "Mauritania",
+            "tokenId": "156",
+            "code": "MRT",
+            "gdp": "7601000000",
+            "area": "1030700",
+            "population": "4649658",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "150",
+            "name": "Isle of Man",
+            "tokenId": "157",
+            "code": "IMN",
+            "gdp": "7492000000",
+            "area": "570",
+            "population": "85033",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "151",
+            "name": "Bermuda",
+            "tokenId": "158",
+            "code": "BMU",
+            "gdp": "7484000000",
+            "area": "50",
+            "population": "62278",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "152",
+            "name": "Monaco",
+            "tokenId": "159",
+            "code": "MCO",
+            "gdp": "7188000000",
+            "area": "26337",
+            "population": "39242",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "153",
+            "name": "Liechtenstein",
+            "tokenId": "160",
+            "code": "LIE",
+            "gdp": "6877000000",
+            "area": "160",
+            "population": "38128",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "154",
+            "name": "Guam",
+            "tokenId": "161",
+            "code": "GUM",
+            "gdp": "5920000000",
+            "area": "540",
+            "population": "168775",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "155",
+            "name": "Maldives",
+            "tokenId": "162",
+            "code": "MDV",
+            "gdp": "5642000000",
+            "area": "300",
+            "population": "540544",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "156",
+            "name": "Montenegro",
+            "tokenId": "163",
+            "code": "MNE",
+            "gdp": "5543000000",
+            "area": "13450",
+            "population": "628066",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "157",
+            "name": "Cayman Islands",
+            "tokenId": "164",
+            "code": "CYM",
+            "gdp": "5517000000",
+            "area": "240",
+            "population": "65722",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "158",
+            "name": "Fiji",
+            "tokenId": "165",
+            "code": "FJI",
+            "gdp": "5496000000",
+            "area": "18270",
+            "population": "896445",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "159",
+            "name": "Togo",
+            "tokenId": "166",
+            "code": "TGO",
+            "gdp": "5490000000",
+            "area": "54390",
+            "population": "8278724",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "160",
+            "name": "Barbados",
+            "tokenId": "167",
+            "code": "BRB",
+            "gdp": "5209000000",
+            "area": "430",
+            "population": "287375",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "161",
+            "name": "Guyana",
+            "tokenId": "168",
+            "code": "GUY",
+            "gdp": "5174000000",
+            "area": "196850",
+            "population": "786552",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "162",
+            "name": "Eswatini",
+            "tokenId": "169",
+            "code": "SWZ",
+            "gdp": "4472000000",
+            "area": "17200",
+            "population": "1160164",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "163",
+            "name": "Sierra Leone",
+            "tokenId": "170",
+            "code": "SLE",
+            "gdp": "4122000000",
+            "area": "72180",
+            "population": "7976983",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "164",
+            "name": "Virgin Islands (U.S.)",
+            "tokenId": "171",
+            "code": "VIR",
+            "gdp": "3855000000",
+            "area": "350",
+            "population": "104425",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "165",
+            "name": "Suriname",
+            "tokenId": "172",
+            "code": "SUR",
+            "gdp": "3697000000",
+            "area": "156000",
+            "population": "586632",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "166",
+            "name": "Djibouti",
+            "tokenId": "173",
+            "code": "DJI",
+            "gdp": "3325000000",
+            "area": "23180",
+            "population": "988000",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "167",
+            "name": "Andorra",
+            "tokenId": "174",
+            "code": "AND",
+            "gdp": "3154000000",
+            "area": "470",
+            "population": "77265",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "168",
+            "name": "Faroe Islands",
+            "tokenId": "175",
+            "code": "FRO",
+            "gdp": "3117000000",
+            "area": "1399",
+            "population": "52110",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "169",
+            "name": "Cura\u00e7ao",
+            "tokenId": "176",
+            "code": "CUW",
+            "gdp": "3102000000",
+            "area": "444",
+            "population": "164093",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "170",
+            "name": "Liberia",
+            "tokenId": "177",
+            "code": "LBR",
+            "gdp": "3071000000",
+            "area": "96320",
+            "population": "5057681",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "171",
+            "name": "Aruba",
+            "tokenId": "178",
+            "code": "ABW",
+            "gdp": "3056000000",
+            "area": "180",
+            "population": "106766",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "172",
+            "name": "Greenland",
+            "tokenId": "179",
+            "code": "GRL",
+            "gdp": "3052000000",
+            "area": "410450",
+            "population": "56770",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "173",
+            "name": "Burundi",
+            "tokenId": "180",
+            "code": "BDI",
+            "gdp": "3012000000",
+            "area": "25680",
+            "population": "11890784",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "174",
+            "name": "Bhutan",
+            "tokenId": "181",
+            "code": "BTN",
+            "gdp": "2531000000",
+            "area": "38117",
+            "population": "771608",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "175",
+            "name": "Lesotho",
+            "tokenId": "182",
+            "code": "LSO",
+            "gdp": "2376000000",
+            "area": "30360",
+            "population": "2142249",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "176",
+            "name": "Central African Republic",
+            "tokenId": "183",
+            "code": "CAF",
+            "gdp": "2220000000",
+            "area": "622980",
+            "population": "4829767",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "177",
+            "name": "St. Lucia",
+            "tokenId": "184",
+            "code": "LCA",
+            "gdp": "2122000000",
+            "area": "617",
+            "population": "184401",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "178",
+            "name": "Timor-Leste",
+            "tokenId": "185",
+            "code": "TLS",
+            "gdp": "2018000000",
+            "area": "14870",
+            "population": "1318445",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "179",
+            "name": "Cabo Verde",
+            "tokenId": "186",
+            "code": "CPV",
+            "gdp": "1982000000",
+            "area": "4030",
+            "population": "555987",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "180",
+            "name": "Belize",
+            "tokenId": "187",
+            "code": "BLZ",
+            "gdp": "1880000000",
+            "area": "22810",
+            "population": "397628",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "181",
+            "name": "Gambia, The",
+            "tokenId": "188",
+            "code": "GMB",
+            "gdp": "1826000000",
+            "area": "10120",
+            "population": "2416668",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "182",
+            "name": "Seychelles",
+            "tokenId": "189",
+            "code": "SYC",
+            "gdp": "1703000000",
+            "area": "460",
+            "population": "98347",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "183",
+            "name": "Antigua and Barbuda",
+            "tokenId": "190",
+            "code": "ATG",
+            "gdp": "1662000000",
+            "area": "440",
+            "population": "97929",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "184",
+            "name": "San Marino",
+            "tokenId": "191",
+            "code": "SMR",
+            "gdp": "1655000000",
+            "area": "60",
+            "population": "33931",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "185",
+            "name": "Solomon Islands",
+            "tokenId": "192",
+            "code": "SLB",
+            "gdp": "1590000000",
+            "area": "27990",
+            "population": "686884",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "186",
+            "name": "Guinea-Bissau",
+            "tokenId": "193",
+            "code": "GNB",
+            "gdp": "1339000000",
+            "area": "28120",
+            "population": "1968001",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "187",
+            "name": "Northern Mariana Islands",
+            "tokenId": "194",
+            "code": "MNP",
+            "gdp": "1323000000",
+            "area": "460",
+            "population": "57559",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "188",
+            "name": "Grenada",
+            "tokenId": "195",
+            "code": "GRD",
+            "gdp": "1211000000",
+            "area": "340",
+            "population": "112523",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "189",
+            "name": "Turks and Caicos Islands",
+            "tokenId": "196",
+            "code": "TCA",
+            "gdp": "1197000000",
+            "area": "616",
+            "population": "42953",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "190",
+            "name": "Sint Maarten (Dutch part)",
+            "tokenId": "197",
+            "code": "SXM",
+            "gdp": "1185000000",
+            "area": "34",
+            "population": "41486",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "191",
+            "name": "Comoros",
+            "tokenId": "198",
+            "code": "COM",
+            "gdp": "1166000000",
+            "area": "1861",
+            "population": "869601",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "192",
+            "name": "St. Kitts and Nevis",
+            "tokenId": "199",
+            "code": "KNA",
+            "gdp": "1053000000",
+            "area": "261",
+            "population": "53494",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "193",
+            "name": "Vanuatu",
+            "tokenId": "200",
+            "code": "VUT",
+            "gdp": "934000000",
+            "area": "12190",
+            "population": "307145",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "194",
+            "name": "Samoa",
+            "tokenId": "201",
+            "code": "WSM",
+            "gdp": "852000000",
+            "area": "2830",
+            "population": "198414",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "195",
+            "name": "St. Vincent and the Grenadines",
+            "tokenId": "202",
+            "code": "VCT",
+            "gdp": "825000000",
+            "area": "389",
+            "population": "111217",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "196",
+            "name": "American Samoa",
+            "tokenId": "203",
+            "code": "ASM",
+            "gdp": "636000000",
+            "area": "200",
+            "population": "55191",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "197",
+            "name": "Dominica",
+            "tokenId": "204",
+            "code": "DMA",
+            "gdp": "582000000",
+            "area": "750",
+            "population": "71986",
+            "cryptoIndex": "4"
+        },
+        {
+            "number": "198",
+            "name": "Tonga",
+            "tokenId": "205",
+            "code": "TON",
+            "gdp": "512000000",
+            "area": "720",
+            "population": "105695",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "199",
+            "name": "S\u00e3o Tom\u00e9 and Principe",
+            "tokenId": "206",
+            "code": "STP",
+            "gdp": "419000000",
+            "area": "1001",
+            "population": "223368",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "200",
+            "name": "Micronesia, Fed. Sts.",
+            "tokenId": "207",
+            "code": "FSM",
+            "gdp": "402000000",
+            "area": "700",
+            "population": "548914",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "201",
+            "name": "Palau",
+            "tokenId": "208",
+            "code": "PLW",
+            "gdp": "268000000",
+            "area": "460",
+            "population": "18094",
+            "cryptoIndex": "3"
+        },
+        {
+            "number": "202",
+            "name": "Marshall Islands",
+            "tokenId": "209",
+            "code": "MHL",
+            "gdp": "221000000",
+            "area": "180",
+            "population": "59190",
+            "cryptoIndex": "5"
+        },
+        {
+            "number": "203",
+            "name": "Kiribati",
+            "tokenId": "210",
+            "code": "KIR",
+            "gdp": "195000000",
+            "area": "810",
+            "population": "119449",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "204",
+            "name": "Nauru",
+            "tokenId": "211",
+            "code": "NRU",
+            "gdp": "118000000",
+            "area": "20",
+            "population": "10824",
+            "cryptoIndex": "1"
+        },
+        {
+            "number": "205",
+            "name": "Tuvalu",
+            "tokenId": "212",
+            "code": "TUV",
+            "gdp": "47000000",
+            "area": "494",
+            "population": "11646",
+            "cryptoIndex": "1"
+        }
+    ]
+}

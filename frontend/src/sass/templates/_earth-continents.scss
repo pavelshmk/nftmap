@@ -1,0 +1,68 @@
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+.earth-continents {
+  @include flex(flex-start, center, row);
+  position: absolute;
+  left: 0; top: 0;
+  box-sizing: border-box;
+
+  overflow-x: scroll;
+  @include size(100vw, 100vh);
+  padding-top: 13rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+  z-index: 3;
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    padding-top: 7rem;
+  }
+
+  &.switch-checked {
+    opacity: 1;
+    visibility: visible;
+    transition: 0s ease;
+
+    .card {
+      transition: .4s ease;
+      opacity: 0;
+    }
+  }
+
+  .card {
+    margin-right: 1rem;
+    opacity: 0;
+    transition: .4s ease;
+
+    &:nth-child(1) {
+      margin-left: 9.8125rem;
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        margin-left: 1.5rem;
+      }
+    }
+
+    &:last-child {
+      margin-right: 2rem;
+    }
+  }
+
+  .plug {
+    opacity: 0;
+    transition: .3s ease;
+    visibility: hidden;
+    @include size(auto, 100%);
+    box-sizing: border-box;
+    padding: calc(9.8125rem / 2 - .5rem);
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      padding: .25rem;
+    }
+  }
+
+  /*&::-webkit-scrollbar {
+    width: 0;
+  }*/
+}

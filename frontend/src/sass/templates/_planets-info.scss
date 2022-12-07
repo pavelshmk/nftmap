@@ -1,0 +1,319 @@
+.planet-info {
+  @include size(calc(100% - 9.8125rem * 2), auto);
+  position: absolute;
+  // left: 9.8125rem;
+  left: calc(50% - (100% - 9.8125rem * 2) / 2);
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+  top: calc(50% - 10.5rem);
+  transform: translate(-5rem, 5rem) scale(.75);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0s linear;
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    z-index: -1;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-lg')) {
+    @media (min-aspect-ratio: 1426 / 912) {
+      width: calc(100% - 32rem);
+      left: calc(50% - (100% - 32rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1426 / 768) {
+      width: calc(100% - 32rem);
+      left: calc(50% - (100% - 32rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1426 / 683) {
+      width: calc(100% - 63rem);
+      left: calc(50% - (100% - 63rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1426 / 605) {
+      width: calc(100% - 72rem);
+      left: calc(50% - (100% - 72rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1426 / 576) {
+      width: calc(100% - 72rem);
+      left: calc(50% - (100% - 72rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1426 / 540) {
+      width: calc(100% - 80rem);
+      left: calc(50% - (100% - 80rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1426 / 483) {
+      width: calc(100% - 114rem);
+      left: calc(50% - (100% - 114rem) / 2);
+    }
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    width: calc(100% - 38rem);
+    left: calc(50% - (100% - 38rem) / 2);
+
+
+    @media (min-aspect-ratio: 1500 / 692) {
+      width: calc(100% - 58rem);
+      left: calc(50% - (100% - 58rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1500 / 568) {
+      width: calc(100% - 82rem);
+      left: calc(50% - (100% - 82rem) / 2);
+    }
+
+    @media (min-aspect-ratio: 1500 / 482) {
+      width: calc(100% - 108rem);
+      left: calc(50% - (100% - 108rem) / 2);
+    }
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    width: calc(100vw - 3rem);
+    left: 1.5rem;
+    top: calc(50% - 12rem);
+  }
+
+  &.sold {
+    .details-buy {
+      display: none;
+      opacity: 0;
+    }
+
+    .details-more {
+      display: flex;
+      opacity: 1;
+    }
+  }
+
+  &.show {
+    transform: translate(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: .2s ease;
+  }
+
+  .body {
+    @include flex(space-between);
+  }
+
+  .left-content {
+    @include flex(space-between, flex-start);
+    flex-wrap: wrap;
+    width: calc(50% - 1rem);
+
+    .params {
+      width: calc(50% - 1rem);
+      border-color: $color-orange-32;
+
+      &-label {
+        color: $color-orange-400;
+        width: calc(100% + .25rem);
+      }
+
+      &.full-width {
+        width: 100%;
+        flex-basis: 100%;
+        height: auto;
+        margin: 2rem 0;
+        padding: .875rem 0;
+        padding-left: 2rem;
+        padding-right: .875rem;
+
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          padding: .75rem 1.5rem;
+          margin: 1.5rem 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      width: 15.625rem;
+
+      .params {
+        width: 100%;
+      }
+
+      .wrapper {
+        @include flex(flex-start, flex-start, column);
+        margin-bottom: 1.5rem;
+
+        .btn-box {
+          @include size(2.5rem);
+          opacity: .64;
+        }
+
+        .details-icon {
+          width: 100%;
+          @include flex(flex-start, center);
+        }
+
+        .eth-value {
+          color: $color-white-100 !important;
+          margin-left: .5rem;
+
+          strong {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 600;
+          }
+
+          > div {
+            letter-spacing: .11em;
+            opacity: .64;
+            display: inline-block;
+            margin-left: .5rem;
+          }
+        }
+
+        .details-values {
+          margin-top: .5rem;
+          margin-left: 0;
+          .usd-value {
+            color: $color-white-100 !important;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-style: normal;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+          }
+        }
+      }
+    }
+  }
+
+  .right-content {
+    width: 50%;
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      width: auto;
+    }
+  }
+
+  .details {
+    @include flex(space-between, center);
+    margin-top: 3.25rem;
+
+    .wrapper {
+      @include flex;
+    }
+
+    &-arrow {
+      opacity: .2;
+      flex: 1;
+      margin-left: .75rem;
+      margin-right: .75rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-values {
+      margin-left: .75rem;
+      strong {
+        @include font-poppins-28-24-500;
+      }
+
+      > div {
+        @include font-barlow-18-auto-600-4;
+        color: $color-orange-400;
+
+      }
+    }
+
+    &-icon {
+      .btn {
+        @include size(4.5rem);
+      }
+    }
+  }
+
+  .details-more {
+    display: none;
+    opacity: 0;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      display: flex;
+      opacity: .6;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+      align-items: center;
+
+      .btn-box, .details-icon {
+        @include size(2.5rem);
+      }
+
+      .details-values {
+        width: 100%;
+        margin-bottom: .5rem;
+        strong {
+          font-size: .65rem;
+          line-height: .5rem;
+        }
+
+        > div {
+          font-size: .65rem;
+          line-height: .5rem;
+        }
+      }
+    }
+  }
+}
+
+$animation-count: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                  14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
+@for $number from 1 through 400 {
+  .show {
+    .animate-#{$number}, &.animate-#{$number} {
+      opacity: 0;
+      transform: translateY(-1rem);
+      animation: .3s appearing #{.3 + $number / 25}s;
+      animation-fill-mode: forwards;
+    }
+
+    .animate-mobile-#{$number}, &.animate-mobile-#{$number} {
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        opacity: 0;
+        transform: translateY(-1rem);
+        animation: .3s appearing #{.05 + $number / 25}s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  .switch-checked {
+    .animate-#{$number}, &.animate-#{$number} {
+      opacity: 0;
+      transform: translateY(-1rem);
+      animation: .2s appearing #{.15 + $number / 30}s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+@import 'params-variables';
+
+.params {
+  padding: $params-padding;
+  border-radius: $params-border-radius;
+  border: $params-border-popup;
+  box-sizing: border-box;
+
+  &.params-2 {
+    padding: $params-padding-2;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      padding: .75rem 1.5rem;
+    }
+  }
+
+  &-single {
+    border: $params-border-single;
+
+    .params {
+      &-label {
+        color: #FFCFAD;
+      }
+    }
+  }
+
+  &-label {
+    @include font-barlow-16-32-500-11;
+    color: $color-purple-200;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  &-value {
+    @include font-poppins-20-24-500;
+    color: $color-purple-50;
+
+    &-green {
+      color: $color-green-400;
+    }
+  }
+
+  &-row {
+    @include flex(space-between, center)
+  }
+}

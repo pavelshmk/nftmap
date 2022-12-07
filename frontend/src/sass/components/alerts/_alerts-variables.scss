@@ -1,0 +1,31 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+$alert-width: 11.625rem;
+$alert-height: 7.3125rem;
+$alert-border-radius: 1.5rem;
+$alert-padding: 1.5rem 2rem;
+
+$alert-types: (
+  permissive: (
+    background: $color-alert-green,
+    box-shadow: inset 0px 2px 4px #31D573,
+  ),
+  contentious: (
+    background: $color-alert-orange,
+    box-shadow: inset 0px 2px 4px #FAA32F,
+  ),
+  contentious-2: (
+    background: $color-alert-purple,
+    box-shadow: inset 0px 2px 4px #D740F8,
+  ),
+  hostile: (
+    background: $color-alert-red,
+    box-shadow: inset 0px 2px 4px #FF375B,
+  ),
+  no-data: (
+    background: $color-alert-gray,
+    box-shadow: inset 0px 2px 4px #938BA5,
+  ),
+);

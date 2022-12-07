@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+
+@mixin font-poppins-56-auto-500() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+@mixin font-poppins-40-48-500() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+@mixin font-poppins-28-24-500() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+@mixin font-poppins-28-28-500() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+@mixin font-poppins-24-24-600() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+@mixin font-poppins-20-24-300() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+@mixin font-poppins-20-14-600() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: .875rem;
+  font-weight: 600;
+}
+
+@mixin font-poppins-20-30-600() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+}
+
+@mixin font-poppins-20-24-500() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+@mixin font-poppins-17-24-400() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+@mixin font-poppins-16-16-500() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+@mixin font-poppins-16-24-400() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+@mixin font-poppins-16-16-600() {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+@mixin font-barlow-24-24-500-32() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+@mixin font-barlow-18-auto-600-4() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@mixin font-barlow-20-24-500-11() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.115em;
+}
+
+@mixin font-barlow-16-32-500-11() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+}
+
+@mixin font-barlow-14-20-600-11() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+}
+
+@mixin font-barlow-14-20-500-11() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+}
+
+@mixin font-barlow-14-auto-600-4() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@mixin font-barlow-11-auto-600-4() {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: normal;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}

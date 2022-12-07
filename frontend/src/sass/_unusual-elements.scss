@@ -1,0 +1,40 @@
+@import 'mixins';
+@import 'grid';
+@import 'fonts';
+
+.social {
+  @include flex(flex-start, center);
+  .text {
+    @include font-poppins-16-16-500;
+    opacity: .4;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .btn-box {
+    @include size(2.5rem);
+    margin-left: .5rem;
+  }
+}
+
+.background-blur {
+  background: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(.25rem);
+}
+
+
+.desktop-only {
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
+.mobile-only {
+  @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}

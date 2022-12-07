@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+graphene-django = "==2.15.0"
+graphene = "==2.1.8"
+django-redis = "*"
+psycopg2-binary = "*"
+django-cors-headers = "*"
+django-dynamic-preferences = "*"
+django-environ = "*"
+django-graphql-jwt = "==0.3.1"
+pyjwt = "==1.7.1"
+eth-brownie = "*"
+web3 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

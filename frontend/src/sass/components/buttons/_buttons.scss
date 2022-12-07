@@ -1,0 +1,102 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+@import 'buttons-variables';
+@import 'buttons-box';
+
+.btn {
+  border-radius: $btn-border-radius;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .3s ease;
+  color: $color-white-100;
+}
+
+.btn-rectangle {
+  padding: $btn-rectangle-padding;
+  border-radius: $btn-rectangle-border-radius;
+  @include font-poppins-24-24-600();
+}
+
+.btn-square {
+  border-radius: $btn-square-border-radius;
+}
+
+.btn-more {
+  padding: 1rem 5.09375rem;
+  @include font-poppins-16-16-500;
+  border-radius: $btn-rectangle-border-radius;
+}
+
+.btn-buy {
+  padding: 1.5rem 3.5625rem;
+}
+
+.btn-icon {
+  @include flex(space-between, center);
+  padding: .75rem;
+  padding-left: 1.5rem;
+
+  .icon {
+    margin-left: 1rem;
+    @include size(1.25rem);
+  }
+}
+
+.btn-avatar {
+  @include flex(flex-start, center);
+  padding: .875rem 1.5rem;
+  padding-left: 1.125rem;
+  text-transform: uppercase;
+  @include font-poppins-16-16-600;
+  letter-spacing: 0.04em;
+
+  img, svg {
+    @include size(1.40625rem, auto);
+  }
+
+  .text {
+    margin-left: .84375rem;
+  }
+
+  &.btn-square {
+    padding-left: 1.0625rem;
+    padding-right: 1.0625rem;
+    padding-top: 0.8125rem;
+    padding-bottom: 0.9375rem;
+  }
+}
+
+@each $button-type, $button-type-value in $button-types {
+  @each $button-state, $button-state-value in $button-type-value {
+    @each $button-style, $button-style-value in $button-state-value {
+      .btn-#{"" + $button-type} {
+        @if ($button-state == 'default') {
+          @if ($button-style == 'background') {
+            background: $button-style-value;
+          } @else if ($button-style == 'box-shadow') {
+            box-shadow: $button-style-value;
+          }
+        } @else if ($button-state == 'hover') {
+          &:hover {
+            @if ($button-style == 'background') {
+              background: $button-style-value;
+            } @else if ($button-style == 'box-shadow') {
+              box-shadow: $button-style-value;
+            }
+          }
+        } @else if ($button-state == 'push') {
+          &:active {
+            @if ($button-style == 'background') {
+              background: $button-style-value;
+            } @else if ($button-style == 'box-shadow') {
+              box-shadow: $button-style-value;
+            }
+          }
+        }
+      }
+    }
+  }
+}

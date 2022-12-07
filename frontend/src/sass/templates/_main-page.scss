@@ -1,0 +1,56 @@
+.main-page {
+  &-title {
+    @include flex(flex-start, center, column);
+    position: absolute;
+    width: 100%;
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+    top: 10.4375rem;
+    z-index: 1;
+    transition: .5s ease, opacity .15s ease;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      top: calc(5rem + 2rem);
+    }
+
+    h1 {
+      @include font-poppins-56-auto-500;
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        @include font-poppins-28-28-500;
+        line-height: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    p {
+      @include font-barlow-24-24-500-32;
+      color: $color-purple-500;
+      margin-top: 0.5rem;
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        @include font-barlow-14-20-600-11;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+
+  &-cards {
+    @include flex();
+    @include size(100%, auto);
+    position: absolute;
+    left: 0; bottom: 10.1875rem;
+    z-index: 1;
+    transition: .5s ease, opacity .15s ease;
+
+    .card {
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+    }
+  }
+}

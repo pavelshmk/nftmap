@@ -1,0 +1,105 @@
+/* Adaptive font size for html */
+$html-font-size-xl: .95vw;
+
+$html-font-size-lg: 1.169590643274854vw;
+
+$html-font-size-sm: 1.61290323vw;
+$html-font-size-xs: 4.266666666666667vw;
+// $html-font-size-xs: 1.169590643274854vw;
+
+$grid-breakpoints: (
+  m-sm: 799px,
+  sm: 800px,
+  m-lg: 1439px,
+  lg: 1440px,
+);
+
+html {
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    font-size: $html-font-size-xl;
+
+    @media (min-aspect-ratio: 1744 / 805) {
+      font-size: .8vw;
+    }
+
+    @media (min-aspect-ratio: 1744 / 661) {
+      font-size: .66vw;
+    }
+
+    @media (min-aspect-ratio: 1744 / 561) {
+      font-size: .57vw;
+    }
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-lg')) {
+    font-size: $html-font-size-lg;
+
+    @media (min-aspect-ratio: 1368 / 900) {
+      font-size: 1vw;
+    }
+
+    @media (min-aspect-ratio: 1368 / 725) {
+      font-size: .93vw;
+    }
+
+    @media (min-aspect-ratio: 1368 / 656) {
+      font-size: .75vw;
+    }
+
+    @media (min-aspect-ratio: 1368 / 592) {
+      font-size: .7vw;
+    }
+
+    @media (min-aspect-ratio: 1368 / 525) {
+      font-size: .65vw;
+    }
+
+    @media (min-aspect-ratio: 1368 / 464) {
+      font-size: .55vw;
+    }
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+    font-size: $html-font-size-xs;
+
+    @media (min-aspect-ratio: 375 / 789) {
+      font-size: 3.5vw;
+    }
+
+    @media (min-aspect-ratio: 375 / 655) {
+      font-size: 3vw;
+    }
+
+    @media (min-aspect-ratio: 375 / 565) {
+      font-size: 2.5vw;
+    }
+
+    @media (min-aspect-ratio: 375 / 465) {
+      font-size: 2vw;
+    }
+
+    @media (min-aspect-ratio: 375 / 365) {
+      font-size: 1.5vw;
+    }
+
+    @media (min-aspect-ratio: 375 / 285) {
+      font-size: 1vw;
+    }
+
+    @media (min-aspect-ratio: 375 / 185) {
+      font-size: .5vw;
+    }
+  }
+  // @media screen and (max-width: 760px) {
+  //   font-size: 2.5vw;
+  // }
+  // @media screen and (max-width: 635px) {
+  //   font-size: 3vw;
+  // }
+  // @media screen and (max-width: 485px) {
+  //   font-size: 3.5vw;
+  // }
+  // @media screen and (max-width: 385px) {
+  //   font-size: $html-font-size-xs;
+  // }
+}

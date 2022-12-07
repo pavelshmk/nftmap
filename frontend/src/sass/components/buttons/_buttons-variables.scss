@@ -1,0 +1,66 @@
+$btn-border-radius: 0.9375rem;
+$btn-rectangle-border-radius: 1rem;
+$btn-square-border-radius: 1.5rem;
+$btn-rectangle-padding: 1.5rem 2.5rem;
+
+$box-button-icons: (
+  check: 'check-box',
+  chevron-left: 'chevron-left-box',
+  chevron-right: 'chevron-right-box',
+  close: 'close-box',
+  creditcard: 'creditcard-box',
+  creditcard-purple: 'creditcard-box-purple',
+  etherium: 'etherium-box',
+  minus: 'minus-box',
+  pass: 'pass-box',
+  plus: 'plus-box',
+  shield: 'shield-box',
+  telegram: 'telegram-box',
+  twitter: 'twitter-box',
+  user: 'user-box',
+);
+
+$button-types: (
+  gray: (
+    default: (
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.048) 0%, rgba(255, 255, 255, 0.078) 100%),
+      box-shadow: ( inset -4.76533e-16px -3px 4px rgba(255, 255, 255, 0.04), inset 4.76533e-16px 3px 3px rgba(255, 255, 255, 0.04) ),
+    ),
+    hover: (
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.33) 100%),
+      box-shadow: ( inset -4.76533e-16px -3px 6px rgba(255, 255, 255, 0.24), inset 4.76533e-16px 3px 6px rgba(255, 255, 255, 0.24) ),
+    ),
+    push: (
+      background: linear-gradient(1.77deg, rgba(255, 255, 255, 0.17) 1.29%, rgba(255, 255, 255, 0.33) 98.32%),
+      box-shadow: ( 1.60837e-15px 26.2667px 52.5333px rgba(41, 19, 20, 0.3345), inset -5.96884e-16px -4px 6px rgba(132, 79, 243, 0.47), inset 5.96884e-16px 4px 4px rgba(135, 78, 255, 0.65) ),
+    ),
+  ),
+  green: (
+    default: (
+      background: linear-gradient(180deg, rgba(87, 247, 47, 0.32) 0%, rgba(12, 176, 167, 0.32) 100%),
+      box-shadow: ( 1.60837e-15px 26.2667px 52.5333px rgba(21, 41, 19, 0.3345), inset -5.96884e-16px -2px 3px rgba(23, 202, 95, 0.24), inset 5.96884e-16px 2px 2px rgba(43, 206, 109, 0.24) ),
+    ),
+    hover: (
+      background: linear-gradient(180deg, rgba(87, 247, 47, 0.64) 0%, rgba(12, 176, 167, 0.64) 100%),
+      box-shadow: ( 1.60837e-15px 26.2667px 52.5333px rgba(21, 41, 19, 0.3345), inset -5.96884e-16px -2px 3px rgba(23, 202, 95, 0.76), inset 5.96884e-16px 2px 2px rgba(46, 235, 122, 0.87) ),
+    ),
+    push: (
+      background: linear-gradient(360deg, rgba(87, 247, 47, 0.6) 0%, rgba(12, 176, 167, 0.6) 100%),
+      box-shadow: inset 0px 0px 6px #160736,
+    ),
+  ),
+  green-2: (
+    default: (
+      background: linear-gradient(180deg, rgba(87, 247, 47, 0.6) 0%, rgba(12, 176, 167, 0.6) 100%),
+      box-shadow: ( 1.60837e-15px 26.2667px 52.5333px rgba(21, 41, 19, 0.3345), inset -5.96884e-16px -4px 6px rgba(23, 202, 95, 0.57), inset 5.96884e-16px 4px 4px #2BCE6D ),
+    ),
+    hover: (
+      background: linear-gradient(180deg, rgba(87, 247, 47, 0.8) 0%, rgba(12, 176, 167, 0.8) 100%),
+      box-shadow: ( 1.60837e-15px 26.2667px 52.5333px rgba(21, 41, 19, 0.3345), inset -5.96884e-16px -4px 6px rgba(33, 232, 113, 0.97), inset 5.96884e-16px 4px 4px rgba(134, 255, 77, 0.78) ),
+    ),
+    push: (
+      background: linear-gradient(360deg, rgba(87, 247, 47, 0.6) 0%, rgba(12, 176, 167, 0.6) 100%),
+      box-shadow: inset 0px 0px 6px #160736,
+    ),
+  )
+);

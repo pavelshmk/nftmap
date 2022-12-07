@@ -1,0 +1,177 @@
+@import '../mixins';
+@import '../colors';
+@import '../fonts';
+@import '../grid';
+
+.space-background {
+  position: absolute;
+  top: 0; left: 0;
+  @include size(100vw, 100vh);
+  z-index: -3;
+
+  .background-color, .background-stars,
+  .background-blend, .background-sun,
+  .background-dodge, .blend-red, .blend-purple {
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  .background-color, .background-stars,
+  .background-blend, .background-sun,
+  .background-dodge,
+  .blend-red, .blend-purple {
+    @include size(100%);
+  }
+
+  .background-color {
+    background-color: $color-background-1;
+  }
+
+  .background-stars {
+    background-image: url('../static/images/stars-background/stars.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: .7;
+    transition: left 0s linear, top 0s linear, background-size .85s ease, .3s ease;
+
+    &.switch-checked {
+      background-size: calc(100% * 3) !important;
+      transition: background-size 1s ease;
+    }
+
+    @supports (mix-blend-mode: lighten) {
+      opacity: 1;
+      mix-blend-mode: lighten;
+    }
+  }
+
+  .background-blend {
+    background: linear-gradient(90deg, rgba(209, 193, 242, 0.57) 15.17%, rgba(209, 193, 242, 0.28) 32.53%);
+    opacity: .1;
+    transition: .5s ease;
+
+    @supports (mix-blend-mode: color) {
+      opacity: 1;
+      mix-blend-mode: color;
+    }
+  }
+
+  .background-dodge {
+    overflow: hidden;
+
+    .blend-red {
+      background-image: url('../static/images/stars-background/blend-red.png');
+      background-size: cover;
+      height: calc(100vh + 20rem);
+      left: -10vh;
+      width: 72.5625rem;
+      background-position: left;
+      background-repeat: no-repeat;
+      opacity: .5;
+      transition: .5s ease;
+
+      @supports (mix-blend-mode: color-dodge) {
+        opacity: .9;
+        mix-blend-mode: color-dodge;
+      }
+    }
+
+    .blend-red-2 {
+      background-image: url('../static/images/stars-background/blend-red-2.png');
+      width: calc(100% + 15rem);
+      height: 100vw;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      bottom: -2rem;
+      background-repeat: no-repeat;
+      opacity: .5;
+      transition: .5s ease;
+
+      @supports (mix-blend-mode: color-dodge) {
+        opacity: .9;
+        mix-blend-mode: color-dodge;
+      }
+    }
+
+
+    .blend-purple {
+      background-image: url('../static/images/stars-background/blend-purple.png');
+      background-size: cover;
+      height: calc(100vh + 20rem);
+      width: 120vh;
+      left: auto;
+      right: -30vh;
+      background-repeat: no-repeat;
+      background-position: right;
+      opacity: .5;
+      transition: .5s ease;
+
+      @supports (mix-blend-mode: color-dodge) {
+        opacity: .8;
+        mix-blend-mode: color-dodge;
+      }
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        @supports (mix-blend-mode: color-dodge) {
+          opacity: .3;
+          mix-blend-mode: color-dodge;
+        }
+      }
+    }
+
+    .blend-purple-2 {
+      position: absolute;
+      background-image: url('../static/images/stars-background/blend-purple-2.png');
+      background-size: cover;
+      height: 72.5625rem;
+      width: calc(100vw + 10rem);
+      left: 0; bottom: calc( -72.5625rem / 6 );
+      top: auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      opacity: 0;
+      transition: .5s ease .3s;
+      visibility: hidden;
+
+      @media (min-aspect-ratio: 1426 / 638) {
+        display: none;
+      }
+
+      @supports (mix-blend-mode: color-dodge) {
+        mix-blend-mode: color-dodge;
+      }
+    }
+  }
+
+  .background-sun {
+    overflow: hidden;
+    position: relative;
+
+    video {
+      width: 100vh;
+      transform: rotateZ(90deg) translate(22vh, 48vh);
+      opacity: .3;
+      display: none;
+
+      transition: .5s ease;
+
+      @supports (mix-blend-mode: color-dodge) {
+        display: block;
+        mix-blend-mode: lighten;
+      }
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        transform: rotateZ(0deg) translate(0rem);
+        width: 100vw;
+        position: absolute;
+        bottom: -4rem; left: 0;
+
+        &.active {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

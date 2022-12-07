@@ -1,0 +1,99 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+.card.card-token-item {
+  @include size(15.625rem, auto);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+  cursor: default;
+
+  .token {
+    &-image {
+      @include size(9.125rem, 6.25rem);
+      margin-top: -4.375rem;
+
+      & > * {
+        @include size(100%, 100%);
+      }
+    }
+
+    &-number {
+      @include font-poppins-20-30-600;
+      letter-spacing: 1px;
+      color: $color-purple-200;
+    }
+
+    &-name {
+      @include font-poppins-28-28-500;
+      color: $color-purple-50;
+      white-space: nowrap;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    &-emission {
+      @include font-barlow-18-auto-600-4;
+      color: $color-green-400;
+      margin-top: 0.5rem;
+    }
+
+    &-price {
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-top: 1.875rem;
+      padding-bottom: 1.875rem;
+      background-color: rgba(29, 12, 64, 0.12);
+      transition: .3s ease;
+      border-radius: 1rem;
+      text-align: center;
+
+      .btn-etherium {
+        cursor: default;
+        margin-left: auto;
+        margin-right: auto;
+        @include size(1.6875rem)
+      }
+
+      &-eth {
+        @include flex(center, center);
+        margin-top: .625rem;
+
+        b {
+          @include font-poppins-16-16-600;
+        }
+
+        span {
+          @include font-barlow-11-auto-600-4;
+          color: rgba(255, 255, 255, .64);
+          text-transform: uppercase;
+          margin-left: .375rem;
+          letter-spacing: 3px;
+        }
+      }
+
+      &-usd {
+        margin-top: 2px;
+        @include font-barlow-14-auto-600-4;
+        color: $color-purple-200;
+      }
+    }
+  }
+
+  .btn-more {
+    width: 100%;
+  }
+
+  &:hover {
+    background: rgba(58, 25, 128, 0.88);
+
+    .token {
+      &-price {
+        background: rgba(29, 12, 64, 0.24);
+        box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.24);
+      }
+    }
+  }
+}

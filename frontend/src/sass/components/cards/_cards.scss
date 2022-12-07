@@ -1,0 +1,26 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+@import 'cards-variables';
+@import 'purchased-items-card';
+@import 'token-items-card';
+
+.card {
+  @include flex(space-between, center);
+  border-radius: $card-border-radius;
+  border: 1px solid $color-purple-600;
+  padding: $card-padding;
+  box-sizing: border-box;
+  transition: .3s ease;
+}
+
+.card-blue {
+  background: $card-purchased-items-background;
+  box-shadow: $card-purchased-items-shadow;
+  cursor: pointer;
+
+  &.hover:hover {
+    background: $card-purchased-items-background-hover;
+  }
+}

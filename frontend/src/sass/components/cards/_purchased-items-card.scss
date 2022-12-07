@@ -1,0 +1,87 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+.card.card-purchased-item {
+  @include flex(flex-start, flex-start, column);
+  box-sizing: border-box;
+  min-width: 18.375rem;
+
+  .top-content, .bottom-content {
+    @include flex(space-between, center);
+    width: 100%;
+  }
+
+  .top-content {
+    .main-number {
+      @include font-poppins-28-24-500;
+      color: $color-white-100;
+    }
+
+    .number {
+      @include font-poppins-20-24-300;
+      color: $color-white-100;
+    }
+
+    .arrow {
+      width: 11.3125rem;
+      margin: 0 .625rem;
+      opacity: .2;
+    }
+  }
+
+  .bottom-content {
+    margin-top: .5rem;
+
+    .text {
+      @include font-barlow-14-20-500-11;
+    }
+  }
+
+  button {
+    @include size(1.25rem);
+    margin-right: -0.28125rem;
+  }
+}
+
+.card.card-purchased-item.hover {
+  &:hover {
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.card.card-purchased-item {
+  &.disabled {
+    background: $card-purchased-items-background-disabled;
+    border: 1px solid $color-white-12;
+    box-shadow: none;
+
+    .top-content {
+      .main-number {
+        opacity: .4;
+      }
+
+      .number {
+        opacity: .2;
+      }
+
+      .arrow {
+        opacity: .1;
+      }
+    }
+
+    .bottom-content {
+      .text {
+        opacity: .2;
+      }
+    }
+
+    .btn {
+      &:hover {
+        opacity: .16;
+      }
+    }
+  }
+}

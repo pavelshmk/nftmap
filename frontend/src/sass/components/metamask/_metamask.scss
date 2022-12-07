@@ -1,0 +1,51 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+.metamask {
+  background: rgba(58, 25, 128, 0.88);
+  box-shadow: inset 0px 0px 5px #652CDE;
+  border-radius: 2rem;
+  width: 34.375rem;
+  height: 31.25rem;
+
+  &.metamask-popup {
+    position: absolute;
+    top: calc(50% - 31.25rem / 2);
+    left: calc(50% - 34.375rem / 2);
+    opacity: 0;
+    display: none;
+    transform: translateY(100%);
+    transition: .3s ease;
+    z-index: 10;
+  }
+
+  &.show {
+    transform: translateY(0);
+    display: block;
+    opacity: 1;
+  }
+
+  .metamask-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include size(100%);
+  }
+
+  &-title {
+    @include font-poppins-28-28-500;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &-image {
+    text-align: center;
+    img {
+      width: 11.625rem;
+      height: 10.625rem;
+      filter: drop-shadow(0px 42px 45px rgba(0, 0, 0, 0.12)), drop-shadow(0px 16.1778px 14.3333px rgba(0, 0, 0, 0.0728889)), drop-shadow(0px 3.42222px 3.66667px rgba(0, 0, 0, 0.0471111));
+    }
+  }
+}

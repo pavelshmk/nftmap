@@ -1,0 +1,61 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+@import '../../grid';
+
+.slider-wrapper {
+  @include flex(flex-start, flex-end);
+
+  .title {
+    color: $color-purple-50;
+    @include font-poppins-16-16-500;
+    margin-right: 1rem;
+    margin-bottom: .25rem;
+  }
+
+  .slider-header {
+    @include flex(space-between);
+    margin-bottom: .5rem;
+    p {
+      color: $color-purple-50;
+      @include font-poppins-16-16-500;
+    }
+  }
+
+  .slider {
+
+    &.slider-horizontal {
+      @include size(14.875rem, .3125rem);
+    }
+
+    .slider-track {
+      background: transparent;
+      height: .3125rem;
+      border-radius: .5rem;
+      margin-top: 0;
+      top: 0;
+      &-low, &-high {
+        background: rgba(#AB83FF, .24);
+      }
+      &-selection {
+        background: $color-purple-50;
+      }
+    }
+
+    .slider-handle {
+      background: $color-purple-50;
+      @include size(.875rem);
+      top: calc(50% - .875rem / 2);
+      transition: transform .3s ease;
+      margin-left: calc(-.875rem / 2);
+
+      &.round {
+        border-radius: .25rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

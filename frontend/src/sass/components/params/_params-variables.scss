@@ -1,0 +1,10 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+
+$params-padding: 1.09735rem 2rem;
+$params-padding-2: 1.125rem 2rem;
+$params-border-radius: 1.25rem;
+
+$params-border-popup: 1px solid $color-purple-600;
+$params-border-single: 1px solid rgba(191, 148, 37, 0.32);

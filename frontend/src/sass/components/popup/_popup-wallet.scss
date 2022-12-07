@@ -1,0 +1,189 @@
+@import '../../mixins';
+@import '../../colors';
+@import '../../fonts';
+@import '../../grid';
+
+.popup {
+  .wallet {
+    &-header {
+      display: flex;
+      align-items: center;
+    }
+
+    &-avatar {
+      border-radius: 2rem;
+      margin-right: 1.5rem;
+      overflow: hidden;
+
+      img {
+        vertical-align: middle;
+        display: inline-block;
+      }
+    }
+
+    &-address {
+      @include font-barlow-20-24-500-11;
+      text-transform: uppercase;
+    }
+
+    &-label {
+      @include font-poppins-20-24-500;
+      color: $color-purple-100;
+      margin-top: .5rem;
+    }
+
+    &-data {
+      display: flex;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      justify-content: space-between;
+
+      &-wrap {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      &-icon {
+        opacity: 1;
+        cursor: default;
+        margin-right: 1rem;
+      }
+
+      &-label {
+        @include font-barlow-14-20-600-11;
+        color: $color-purple-200;
+      }
+
+      &-value {
+        @include font-poppins-20-30-600;
+        line-height: 1;
+        color: $color-purple-50;
+      }
+
+      &-info {
+        align-self: center;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid $color-purple-600;
+        box-sizing: border-box;
+        border-radius: 1.25rem;
+        padding: 1.5rem 1.875rem;
+        flex-grow: 1;
+
+        &:first-child {
+          flex-basis: 20.625rem;
+        }
+
+        &:last-child {
+          flex-basis: 43.125rem;
+          margin-left: 2rem;
+        }
+      }
+    }
+
+    &-owned {
+      &-header {
+        display: flex;
+        align-items: center;
+      }
+
+      &-title {
+        @include font-poppins-20-30-600;
+        letter-spacing: 0.02em;
+        margin-right: 0.625rem;
+      }
+
+      &-arrow {
+        flex-grow: 1;
+        opacity: .2;
+        margin-right: 0.625rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-number {
+        color: $color-white-60;
+      }
+
+      &-image {
+        width: 14.1875rem;
+        height: 9.6875rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-list {
+        white-space: nowrap;
+        margin-top: 2rem;
+        margin-left: -6.25rem;
+        margin-bottom: 3.75rem;
+        margin-right: -6.25rem;
+        padding-right: 6.25rem;
+        padding-left: 6.25rem;
+        box-sizing: border-box;
+        overflow-x: auto;
+        @include flex(flex-start, stretch);
+      }
+
+      &-item,
+      &-empty {
+        width: 15rem;
+        border-radius: 2rem;
+        background: rgba(58, 25, 128, 0.64);
+        box-shadow: inset 0px 0px 5px rgba(101, 44, 222, 0.72);
+        padding-bottom: 2rem;
+        margin-right: 2rem;
+        text-align: center;
+        padding-top: 2rem;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          background-color: #29115C;
+          box-shadow: none;
+        }
+      }
+
+      &-empty {
+        padding-top: 2.9375rem;
+        padding-bottom: 2.9375rem;
+        background-color: #29115C;
+        vertical-align: top;
+        box-shadow: none;
+        cursor: default;
+      }
+
+      &-name {
+        margin-top: 1.25rem;
+        @include font-poppins-20-24-500;
+      }
+
+      &-text {
+        white-space: normal;
+        @include font-poppins-16-16-600;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        line-height: 1.5rem;
+        color: #58399B;
+
+        div {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+}

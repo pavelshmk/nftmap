@@ -1,0 +1,13 @@
+$switch-border-radius: 2.75rem;
+$switch-padding: 1rem;
+$switch-default-background: linear-gradient(180deg, rgba(255, 255, 255, 0.048) 0%, rgba(255, 255, 255, 0.078) 100%);
+$switch-active-background: linear-gradient(180deg, rgba(123, 64, 247, 0.6) 0%, rgba(84, 31, 196, 0.6) 100%);
+$switch-default-shadow: inset -4.76533e-16px -3px 4px rgba(255, 255, 255, 0.04), inset 4.76533e-16px 3px 3px rgba(255, 255, 255, 0.04);
+$switch-active-shadow: 1.60837e-15px 26.2667px 52.5333px rgba(41, 19, 20, 0.3345), inset -5.96884e-16px -4px 6px rgba(132, 79, 243, 0.47), inset 5.96884e-16px 4px 4px rgba(135, 78, 255, 0.65);
+
+$switch-content-margin: 2.3125rem;
+
+$input-border: 1px solid rgba(#F2EBFF, .24);
+$input-color-border-active: rgba(#F2EBFF, .6);
+$input-border-radius: 1.25rem;
+$input-padding: 1rem;

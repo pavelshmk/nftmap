@@ -1,0 +1,341 @@
+@import 'grid';
+@import 'mixins';
+
+:root {
+  --planets-zoom-size: 9rem;
+  --planets-zoom-offset: calc(50vw - var(--orbit-width) );
+  --planets-zoom-size-step-1: 9rem;
+  --planets-zoom-offset-step-1: calc(18vw - var(--orbit-width) );
+  --orbit-mobile-width-2: 100vw;
+}
+$planets-zoom-size: 9rem;
+
+.solar-system {
+  // --------------------------------------------------------------
+  &.zoom-in-step-1 {
+
+    .planets-canvas {
+      opacity: 0;
+    }
+
+    ~ .space-background {
+      .background-sun video {
+        transform: rotateZ(90deg) translate(22vh, 60vh);
+        opacity: 0;
+        visibility: hidden;
+      }
+      .background-stars {
+        background-size: calc(100% * .75);
+        transition: .4s ease-in;
+      }
+      .background-dodge {
+        .blend-purple {
+          visibility: hidden;
+          opacity: 0 !important;
+        }
+      }
+
+      .background-blend {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .planets {
+      position: absolute;
+    }
+  }
+  &.zoom-in {
+    // -------Исключение текстового контента главного экрана-----------------
+    .main-page-title {
+      transform: translateY(-100vh);
+      visibility: hidden;
+      opacity: 0;
+    }
+    .main-page-cards {
+      transform: translateY(100vh);
+      visibility: hidden;
+      opacity: 0;
+    }
+    // --------------------------------------
+
+    // -------Изменение фона-----------------
+    ~ .space-background {
+      .background-sun video {
+        transform: rotateZ(90deg) translate(22vh, 60vh);
+        opacity: 0;
+        visibility: hidden;
+      }
+      .background-stars {
+        background-size: calc(100% * 2);
+      }
+
+      .background-dodge {
+        .blend-red {
+          visibility: hidden;
+          opacity: 0 !important;
+        }
+
+        .blend-purple {
+          visibility: hidden;
+          opacity: 0 !important;
+        }
+
+        .blend-purple-2 {
+          opacity: 1 !important;
+          visibility: visible;
+        }
+      }
+
+      .background-blend {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    // --------------------------------------
+
+    // -------Изменение планет-----------------
+    .planets-canvas {
+      transition: .3s ease .1s;
+
+      .planets {
+        position: absolute;
+        width: 100vw;
+        transform: translateX(0);
+        transition: .3s ease;
+      }
+
+      .orbit-line {
+        margin-left: calc( var(--orbit-width) * -0.5 );
+
+        // @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        //   margin-left: ;
+        // }
+
+        &.mercury-orbit {
+          left: 0;
+        }
+        &.venus-orbit {
+          left: calc(var(--orbit-width) + var(--planets-zoom-offset));
+        }
+        &.moon-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 2 + var(--planets-zoom-size) + 20rem);
+          width: calc( var(--orbit-width) / 20 );
+        }
+        &.earth-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 2);
+        }
+        &.mars-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 3);
+        }
+        &.jupiter-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 4);
+        }
+        &.saturn-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 5);
+        }
+        &.uranus-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 6);
+        }
+        &.neptune-orbit {
+          left: calc( (var(--orbit-width) + var(--planets-zoom-offset)) * 7);
+        }
+
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          margin-left: 0;
+          width: 100vw;
+
+          &.mercury-orbit {
+            left: 0;
+          }
+          &.venus-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 1);
+          }
+          &.earth-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 2);
+          }
+          &.mars-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 3);
+          }
+          &.jupiter-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 4);
+          }
+          &.saturn-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 5);
+          }
+          &.uranus-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 6);
+          }
+          &.neptune-orbit {
+            left: calc(var(--orbit-mobile-width-2) * 7);
+          }
+        }
+      }
+
+      .orbit-line .orbit {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .planet, .earth-tooltip {
+        @include size($planets-zoom-size);
+        top: calc(50% - var(--planets-zoom-size) / 2);
+
+        &.moon {
+          @include size($planets-zoom-size / 4);
+        }
+        &.saturn {
+          @include size($planets-zoom-size * 1.2);
+          top: calc(50% - var(--planets-zoom-size) * 1.2 / 2);
+          left: calc( 50% - var(--planets-zoom-size) * 1.2 / 2 );
+
+        }
+        &.uranus {
+          @include size($planets-zoom-size  * 1.2);
+          top: calc(50% - var(--planets-zoom-size) * 1.2 / 2);
+          left: calc( 50% - var(--planets-zoom-size) * 1.2 / 2 );
+        }
+      }
+
+      .earth, .jupiter, .mars, .mercury, .moon,
+      .neptune, .saturn, .venus, .uranus {
+        left: calc(50% - var(--planets-zoom-size) / 2);
+      }
+
+
+      .earth-tooltip .tooltip {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .shadow-2 {
+        opacity: 0 !important;
+      }
+
+      .shadow {
+        opacity: 1;
+      }
+    }
+
+
+    // ----- активность планет ---------------------
+    .planet.active {
+      transition: .4s ease .2s;
+      @include size(27.625rem);
+      cursor: default;
+      left: 7.5rem;
+      top: 8.75rem;
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        @include size(12.625rem);
+        left: calc(50% - 1.5rem);
+        top: calc(50% - 13rem) !important;
+      }
+
+      @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+        .shadow-mobile {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &.saturn {
+        @include size(29rem * 1.1);
+        left: 7.5rem;
+        top: 8.75rem;
+
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          @include size(23rem);
+          left: calc(50% - 6rem);
+          top: calc(50% - 16.5rem) !important;
+        }
+
+        .shadow {
+          @include size(calc(100% / 1.5));
+          left: calc(50% - 100% / 1.5 / 2);
+          top: calc(50% - 100% / 1.5 / 2 + 1rem);
+
+          @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+            opacity: 1 !important;
+            @include size(14rem);
+          }
+        }
+      }
+
+      &.uranus {
+        @include size(29rem * 1.1);
+        left: 7.5rem;
+        top: 8.75rem;
+
+        @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+          @include size(23rem);
+          left: calc(50% - 6rem);
+          top: calc(50% - 16.5rem) !important;
+        }
+
+        .shadow {
+          @include size(calc(100% / 1.5));
+          left: calc(50% - 100% / 1.5 / 2);
+          top: calc(50% - 100% / 1.5 / 2 + 1rem)
+        }
+      }
+
+
+      [class*="active"] {
+        opacity: 1;
+      }
+
+      &:hover {
+        transform: scale(1);
+      }
+
+    }
+
+  }
+
+  &.zoom-in .earth-tooltip.active,
+  &.zoom-in .earth-tooltip.active .planet {
+    transition: .3s ease .3s;
+    @include size(29rem);
+    top: calc(50% - 29rem / 2);
+    left: calc(50% - 29rem / 2);
+    cursor: default;
+
+    @media screen and (max-width: map-get($grid-breakpoints, 'm-sm')) {
+      @include size(35rem);
+      top: calc(50% - 35rem / 2);
+      left: calc(50% - 35rem / 2);
+
+      .shadow-2 {
+        opacity: 1 !important;
+        @include size(30rem);
+      }
+    }
+
+    &:hover {
+      transform: scale(1);
+    }
+
+    [class*="active"] {
+      opacity: 1;
+    }
+  }
+
+  &.zoom-in .earth-tooltip.active {
+    transition: .5s ease;
+
+    .planet {
+      transition: .5s ease;
+    }
+  }
+
+
+  &.zoom-in {
+    .planets-toolbar {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  // --------------------------------------
+}

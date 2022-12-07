@@ -1,0 +1,49 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+type CountryType {
+    area: Decimal!
+    code: String!
+    cryptoIndex: Int!
+    emission: Decimal!
+    gdp: Decimal!
+    image: String
+    name: String!
+    number: Int!
+    population: Decimal!
+    price: Decimal!
+    tokenId: Int!
+}
+
+type EntityType {
+    image: String
+    link: String
+    name: String
+    tokenId: String
+}
+
+type PlanetType {
+    emission: Decimal!
+    enum: String!
+    name: String!
+    number: Int!
+    price: Decimal!
+    sunDistance: Decimal!
+    tokenId: Int!
+    weight: Decimal!
+}
+
+type Query {
+    countries: [CountryType!]
+    entitiesInfo(tokenIds: [String]): [EntityType]
+    maxCountryPrice: Decimal
+    planets: [PlanetType!]
+    tokenMintArgs(buyer: String, tokenId: Int): [String]
+}
+
+
+"The `Decimal` scalar type represents a python Decimal."
+scalar Decimal
